@@ -4,36 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Amazon_Books</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon (2).ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- webfont-icon -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <!-- css/js -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="js/main.js">
+
+
+    <!-- js cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
 <body>
-    <div id="all-wrap">
+    
     <header>
         <div id="nav-wrap">
             <div id="nav">
                 <ul>
-                    <li>Literature</li>
-                    <li>Fiction</li>
-                </ul>
-
-                <ul>
-                    <li>Novel</li>
-                    <li>Podcast</li>
-                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li><a href="#">Literature</a></li>
+                    <li><a href="#">Fiction</a></li>
+                    <li id="logo"><a href="#"><img src="img/Amazon_Books.png" alt="amazonbooks"></a></li>
+                    <li><a href="#">Novel</a></li>
+                    <li><a href="#">Podcast</a></li>
+                    <li id="glass"><i class="fa-solid fa-magnifying-glass"></i></li>
                 </ul>
             </div>
         </div>
     </header>
 
-    <slider></slider>
+    <section>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="img/book1.jpg" alt="book"></div>
+              <div class="swiper-slide"><img src="img/book2.jpg" alt="book"></div>
+              <div class="swiper-slide"><img src="img/book3.jpg" alt="book"></div>
+              <div class="swiper-slide"><img src="img/book4.jpg" alt="book"></div>
+              <div class="swiper-slide"><img src="img/book5.webp" alt="book"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          pagination: {
+            el: ".swiper-pagination",
+        
+          },
+        });
+      </script>
+
     <div id="book-animation"></div>
-    <div id="box1"></div>
-    <div id="box2"></div>
-    <div id="box3"></div>
-    <div id="box4"></div>
-    <div id="box5"></div>
+
+    <div id="best-seller"></div>
+    <div id="img-slider"></div>
+    <div id="chronicle"></div>
+    <div id="talk"></div>
+    <div id="ending"></div>
  
 
     <footer>
@@ -45,10 +79,13 @@
                     <li>Index</li>
                     <li>News</li>
                     <li>Podcast</li>
-                    <li>Expert</li>
+                    <li>Surpport</li>
                     <li>Search</li>
                 </ul>
             </div>
+
+
+
             <div id="footer2">
                 <ul>
                     <li><i class="fa-brands fa-twitter"></i></li>
@@ -59,11 +96,11 @@
         </div>
             <div id="footer-bottom">
             <div id="footer3">© ПОЛКА 2018. ВСЕ ПРАВА ЗАЩИЩЕНЫ | ЛИЦЕНЗИЯ</div>
-            <div id="footer4">sITE BY MINKYUNG KIM</div>
+            <div id="footer4">SITE BY MINKYUNG KIM</div>
             </div>
         </div>
     
     </footer>
-</div>
+
 </body>
 </html>
