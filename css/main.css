@@ -5,7 +5,9 @@
   font-family: "Anton", sans-serif;
 }
 
-ol, ul, li {
+ol,
+ul,
+li {
   text-decoration: none;
   list-style-type: none;
 }
@@ -16,20 +18,25 @@ ol, ul, li {
 }
 #nav-wrap #nav {
   width: 85%;
-  height: 100%;
-  background-color: pink;
+  height: 100px;
+  background-color: gold;
   margin: 0 auto;
   padding-top: 100px;
 }
 #nav-wrap #nav ul {
+  width: 90%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 #nav-wrap #nav ul li {
+  width: 100%;
+  height: 100%;
   margin: 0 30px;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 23px;
+  line-height: 140px;
 }
 #nav-wrap #nav ul li a:link {
   color: black;
@@ -42,9 +49,9 @@ ol, ul, li {
 }
 
 #logo img {
-  width: 700px;
-  height: 130px;
-  padding-top: 20px;
+  width: 400px;
+  height: 77px;
+  padding-top: 30px;
 }
 
 #glass i {
@@ -69,34 +76,238 @@ section .swiper .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+section .swiper .swiper-slide .text {
+  width: 80%;
+  height: 600px;
+  position: absolute;
+  transform: translate(-50, -50);
+  background-color: rgba(169, 169, 169, 0.493);
+  z-index: 10;
+  margin: 0 auto;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section .swiper .swiper-slide .text .text-t {
+  font-size: 30px;
+  font-weight: bolder;
+  margin: 20px 0;
+}
+section .swiper .swiper-slide .text hr {
+  width: 50%;
+  border: 0.5px solid wheat;
+  margin: 0 auto;
+}
+section .swiper .swiper-slide .text .text-main {
+  font-size: 100px;
+  margin: 50px 0;
+}
+section .swiper .swiper-slide .text .text-main:hover {
+  color: rgb(146, 107, 56);
+  cursor: poiner;
+}
+section .swiper .swiper-slide .text .text-ex {
+  font-size: 25px;
+  margin: 40px 0;
 }
 section .swiper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   opacity: 0.8;
+  position: absolute;
 }
 
 #book-animation {
   width: 100%;
   height: 700px;
-  background-color: rgba(185, 30, 30, 0.445);
   position: absolute;
   top: 400px;
   left: 0;
   z-index: 100;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#book-animation .note1 {
+  width: 70px;
+  height: 700px;
+  background-color: darkred;
+  color: white;
+  margin: 0 20px;
+  writing-mode: vertical-lr;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+#book-animation .note1 #title {
+  font-size: 18px;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  margin: 0 20px;
+}
+#book-animation .note1 #writer {
+  font-size: 15px;
+  margin: 40px 25px;
+}
+#book-animation .note1 a:link {
+  margin: 20px 0 0 0;
+  color: antiquewhite;
+}
+#book-animation .note1:hover {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 #best-seller {
   width: 100%;
-  height: 800px;
+  height: 1300px;
   background-color: burlywood;
 }
-
-#img-slider {
+#best-seller #best-seller-wrap {
+  width: 80%;
+  height: 1200px;
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+#best-seller #best-seller-wrap .best-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#best-seller #best-seller-wrap .best-title #best-t {
+  font-size: 30px;
+  margin: 10px 0 0 0;
+}
+#best-seller #best-seller-wrap .best-title .best-line1 {
   width: 100%;
-  height: 800px;
-  background-color: coral;
+  border: 1px solid lightgray;
+  margin: 5px 0;
+}
+#best-seller #best-seller-wrap .best-title .best-line2 {
+  width: 100%;
+  border: 1px solid black;
+  margin: 5px 0;
+}
+#best-seller #best-seller-wrap .best-title #best-ex {
+  font-size: 15px;
+}
+#best-seller .select {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+#best-seller .line1 {
+  width: 95%;
+  height: 320px;
+  background-color: gold;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+}
+#best-seller .line1 .b1 {
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+#best-seller .line1 .num {
+  width: 20px;
+  height: 70px;
+  background-color: white;
+  color: gray;
+  font-size: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+#best-seller .line1 #line1-bt {
+  width: 100px;
+  height: 30px;
+  background-color: skyblue;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+#best-seller .line1 #line1-bt:hover {
+  color: white;
+  background-color: black;
+}
+
+#buy {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  background-color: rgb(255, 153, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#buy #buy-wrap {
+  width: 100%;
+  height: 500px;
+  background-image: url(../img/books-with-amazon-smile_331427528_21-9_1280.jpg);
+  background-size: cover;
+  background-position: contain;
+  margin: 0 auto;
+}
+#buy #buy-tit {
+  width: 80%;
+  height: 400px;
+  background-color: rgba(128, 128, 128, 0.445);
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+#buy #buy-tit #buy-titfont {
+  font-size: 35px;
+  margin: 20px 0;
+  font-weight: bolder;
+}
+#buy #buy-tit #buy-box {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#buy #buy-tit #buy-box .buy-ex {
+  width: 30%;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.473);
+}
+#buy #buy-tit #buy-box .buy-ex i {
+  font-size: 80px;
+}
+#buy #buy-tit #buy-box .buy-ex .buy-tt {
+  font-size: 40px;
+  color: rgb(255, 153, 0);
+}
+#buy #buy-tit #buy-box .buy-ex .buy-exx {
+  font-size: 17px;
+  color: gray;
 }
 
 #chronicle {

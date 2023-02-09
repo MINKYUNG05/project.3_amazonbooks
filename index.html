@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,20 +15,24 @@
 
     <!-- css/js -->
     <link rel="stylesheet" href="css/main.css">
+
     <link rel="stylesheet" href="js/main.js">
+
 
 
     <!-- js cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 </head>
+
 <body>
-    
+
     <header>
         <div id="nav-wrap">
             <div id="nav">
                 <ul>
                     <li><a href="#">Literature</a></li>
                     <li><a href="#">Fiction</a></li>
+                    <li><a href="#">poem</a></li>
                     <li id="logo"><a href="#"><img src="img/Amazon_Books.png" alt="amazonbooks"></a></li>
                     <li><a href="#">Novel</a></li>
                     <li><a href="#">Podcast</a></li>
@@ -40,67 +45,322 @@
     <section>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><img src="img/book1.jpg" alt="book"></div>
-              <div class="swiper-slide"><img src="img/book2.jpg" alt="book"></div>
-              <div class="swiper-slide"><img src="img/book3.jpg" alt="book"></div>
-              <div class="swiper-slide"><img src="img/book4.jpg" alt="book"></div>
-              <div class="swiper-slide"><img src="img/book5.webp" alt="book"></div>
+                <div class="swiper-slide">
+                    <img src="img/book1.jpg" alt="book">
+                    <div class="text">
+                        <p class="text-t">AMAZON BOOKS 의 새로운 특별 프로젝트</p>
+                        <h1 class="text-main">19 세기의 외국 작가</h1>
+                        <hr>
+                        <p class="text-ex">대한민국에서 읽은 사람 : 대규모 설문 조사 "아마존북스"</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide"><img src="img/book2.jpg" alt="book">
+                    <div class="text">
+                        <p class="text-t">AMAZON BOOKS 의 새로운 특별 프로젝트</p>
+                        <h1 class="text-main">화이트해커의 30분 루틴</h1>
+                        <hr>
+                        <p class="text-ex">AI의 발전이 가져오는 편리함 그리고 어두운 내면</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide"><img src="img/book3.jpg" alt="book">
+                    <div class="text">
+                        <p class="text-t">AMAZON BOOKS 의 새로운 특별 프로젝트</p>
+                        <h1 class="text-main">어린이 독서 상위 10 서적</h1>
+                        <hr>
+                        <p class="text-ex">아마존북스 설문조사에 따르면 대한민국 어린이를 위한 가장 중요한 책</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide"><img src="img/book4.jpg" alt="book">
+                    <div class="text">
+                        <p class="text-t">AMAZON BOOKS 의 새로운 특별 프로젝트</p>
+                        <h1 class="text-main">20세기 여성 작가 모음</h1>
+                        <hr>
+                        <p class="text-ex">3세기의 걸친 여성의 글쓰기 : 캐서린 2세부터 엘레나 파나일로바까지</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide"><img src="img/book5.webp" alt="book">
+                    <div class="text">
+                        <p class="text-t">AMAZON BOOKS 의 새로운 특별 프로젝트</p>
+                        <h1 class="text-main">세계가 바라보는 대한민국</h1>
+                        <hr>
+                        <p class="text-ex">해외 유명 작가들이 묘사한 대한민국의 모습을 샅샅히 살펴보자</p>
+                    </div>
+                </div>
+
             </div>
             <div class="swiper-pagination"></div>
-          </div>
+        </div>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <script>
         var swiper = new Swiper(".mySwiper", {
-          pagination: {
-            el: ".swiper-pagination",
-        
-          },
+            pagination: {
+                el: ".swiper-pagination",
+
+            },
         });
-      </script>
+    </script>
 
-    <div id="book-animation"></div>
+    <div id="book-animation">
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
 
-    <div id="best-seller"></div>
-    <div id="img-slider"></div>
+    </div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+    <script>
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: "넘어", size: 50 },
+            headers: { Authorization: "KakaoAK 4b0905b291a261ae8f16e3c80a8272e2" }
+        })
+            .done(function (msg) {
+
+
+                // for문 (8개)
+                var boxs = document.getElementsByClassName('note1');
+
+
+                for (var i = 0; i < boxs.length; i++) {
+
+                    $(".note1").eq(i).append("<p id=title>" + '<a href="sub_book13.html">' + msg.documents[i].title + "</a>" + "</p>");
+
+
+                    $(".note1").eq(i).append("<p id=writer>" + msg.documents[i].authors + "</p>");
+
+
+                }
+
+            });
+    </script>
+
+    <div id="best-seller">
+        <div id="best-seller-wrap">
+            <div class="best-title">
+                <h1 id="best-t">The New York Times Best Sellers</h1>
+                <hr class="best-line1">
+                <h5 id="best-ex">Authoritatively ranked lists of books sold in the United States, sorted by format and
+                    genre.</h5>
+                <hr class="best-line2">
+
+                <div class="select">
+                    <div id="g-select">
+                        <select>
+                            <option value="fiction">fiction</option>
+                            <option value="none">---</option>
+                            <option value="Combined Print & E-Book Fiction">Combined Print & E-Book Fiction</option>
+                            <option value="Hardcover Fiction">Hardcover Fiction</option>
+                            <option value="Hardcover Nonfiction">Hardcover Nonfiction</option>
+                        </select>
+
+                        <select>
+                            <option value="non-fiction">non-fiction</option>
+                            <option value="none">---</option>
+                            <option value="Combined Print & E-Book Fiction">Combined Print & E-Book Fiction</option>
+                            <option value="Hardcover Fiction">Hardcover Fiction</option>
+                            <option value="Hardcover Nonfiction">Hardcover Nonfiction</option>
+                            <option value="Advice, How-To & Miscellaneous">Advice, How-To & Miscellaneous</option>
+                        </select>
+
+                        <select>
+                            <option value="childrens">childrens</option>
+                            <option value="none">---</option>
+                            <option value="Children’s Middle Grade Hardcover">Children’s Middle Grade Hardcover</option>
+                            <option value="Children’s Picture Books">Children’s Picture Books</option>
+                            <option value="Children’s Series">Children’s Series</option>
+                            <option value="Young Adult Hardcover">Young Adult Hardcover</option>
+                        </select>
+                    </div>
+
+                    <div id="g-date">
+                        <span><i class="fa-solid fa-caret-left"></i></span>
+                        <span> February 6, 2023 </span>
+                        <span><i class="fa-solid fa-caret-right"></i></span>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="line1">
+                <div class="b1">
+                    <p class="num">1</p>
+                </div>
+                <div class="b1">
+                    <p class="num">2</p>
+                </div>
+                <div class="b1">
+                    <p class="num">3</p>
+                </div>
+                <div class="b1">
+                    <p class="num">4</p>
+                </div>
+                <div class="b1">
+                    <p class="num">5</p>
+                </div>
+            </div>
+
+            <div class="line1">
+                <div class="b1">
+                    <p class="num">6</p>
+                </div>
+                <div class="b1">
+                    <p class="num">7</p>
+                </div>
+                <div class="b1">
+                    <p class="num">8</p>
+                </div>
+                <div class="b1">
+                    <p class="num">9</p>
+                </div>
+                <div class="b1">
+                    <p class="num">10</p>
+                </div>
+            </div>
+
+            <div class="line1">
+                <div class="b1">
+                    <p class="num">11</p>
+                </div>
+                <div class="b1">
+                    <p class="num">12</p>
+                </div>
+                <div class="b1">
+                    <p class="num">13</p>
+                </div>
+                <div class="b1">
+                    <p class="num">14</p>
+                </div>
+                <div class="b1">
+                    <p class="num">15</p>
+                </div>
+            </div>
+            <script>
+                $.ajax({
+                    method: "GET",
+                    url: "https://dapi.kakao.com/v3/search/book?target=title",
+                    data: { query: "긍정의", size: 50 },
+                    headers: { Authorization: "KakaoAK 4b0905b291a261ae8f16e3c80a8272e2" }
+                })
+                    .done(function (msg) {
+
+
+                        // for문 (8개)
+                        var boxs = document.getElementsByClassName('b1');
+
+
+                        for (var i = 0; i < boxs.length; i++) {
+
+                            $(".b1").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                            $(".b1").eq(i).append("<h4>" + '<a href="sub_book13.html">' + msg.documents[i].title + "</a>" + "</h4>");
+
+
+                            $(".b1").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
+
+
+                            //선택한 select option 값 title로 가져오기 
+                            var booktitle = msg.documents[i].title;
+                            $('#book>option').eq(i).text(booktitle);
+
+
+                            var str = msg.documents[i].contents;
+                            var str2 = str.substring(0, 30);
+
+                            $(".b1").eq(i).append("<h5>" + '<a href="sub_book13.html">' + str2 + "</a>" + "</h5>");
+                            $(".b1").eq(i).append('<button id="line1-bt">' + "Add to Cart" + "</button>");
+
+                        }
+
+                    });
+            </script>
+        </div>
+    </div>
+
+
+    <div id="buy">
+        <div id="buy-wrap">
+            <div id="buy-tit">
+                <p id="buy-titfont">전 세계 베스트 셀러를 한자리에서 무료로 읽어보실 수 있습니다.</p>
+                <div id="buy-box">
+                    <div class="buy-ex">
+                        <i class="fa-solid fa-earth-americas"></i><br>
+                        <p class="buy-tt">+5 billion</p><br>
+                        <p class="buy-exx">MOBILE USERS IN THE WORLD</p>
+                    </div>
+
+                    <div class="buy-ex"><i class="fa-solid fa-mobile-screen-button"></i><br>
+                        <p class="buy-tt">88%</p><br>
+                        <p class="buy-exx">OF FACEBOOK USERS ACCESS IT VIA THEIR SMARTPHONE</p>
+                    </div>
+
+                    <div class="buy-ex"><i class="fa-solid fa-users"></i>
+                        <br>
+                        <p class="buy-tt">>1 billion</p><br>
+                        <p class="buy-exx">OF USERS WATCH STORIES EVERY DAY</p></div>
+                </div>
+                <span>원하는 책을 찾을 수 없습니까? <br><a href="#">Amazonbooks 고객센터</a>로 문의를 주시면 친절하게 응대 도와드리겠습니다.</span>
+
+                
+
+                </div>
+            
+            <div></div>
+        </div>
+    </div>
     <div id="chronicle"></div>
     <div id="talk"></div>
     <div id="ending"></div>
- 
+
 
     <footer>
         <div id="footer-wrap">
             <div id="footer-up">
-            <div id="footer1">
-                <ul>
-                    <li>Books</li>
-                    <li>Index</li>
-                    <li>News</li>
-                    <li>Podcast</li>
-                    <li>Surpport</li>
-                    <li>Search</li>
-                </ul>
+                <div id="footer1">
+                    <ul>
+                        <li>Books</li>
+                        <li>Index</li>
+                        <li>News</li>
+                        <li>Podcast</li>
+                        <li>Surpport</li>
+                        <li>Search</li>
+                    </ul>
+                </div>
+
+
+
+                <div id="footer2">
+                    <ul>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                        <li><i class="fa-brands fa-youtube"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                    </ul>
+                </div>
             </div>
-
-
-
-            <div id="footer2">
-                <ul>
-                    <li><i class="fa-brands fa-twitter"></i></li>
-                    <li><i class="fa-brands fa-youtube"></i></li>
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                </ul>
-            </div>
-        </div>
             <div id="footer-bottom">
-            <div id="footer3">© ПОЛКА 2018. ВСЕ ПРАВА ЗАЩИЩЕНЫ | ЛИЦЕНЗИЯ</div>
-            <div id="footer4">SITE BY MINKYUNG KIM</div>
+                <div id="footer3">© ПОЛКА 2018. ВСЕ ПРАВА ЗАЩИЩЕНЫ | ЛИЦЕНЗИЯ</div>
+                <div id="footer4">SITE BY MINKYUNG KIM</div>
             </div>
         </div>
-    
+
     </footer>
 
 </body>
+
 </html>
