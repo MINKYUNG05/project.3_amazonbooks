@@ -32,11 +32,13 @@
                 <ul>
                     <li><a href="#">Literature</a></li>
                     <li><a href="#">Fiction</a></li>
-                    <li><a href="#">poem</a></li>
+                    <li><a href="#">Poem</a></li>
                     <li id="logo"><a href="#"><img src="img/Amazon_Books.png" alt="amazonbooks"></a></li>
                     <li><a href="#">Novel</a></li>
                     <li><a href="#">Podcast</a></li>
-                    <li id="glass"><i class="fa-solid fa-magnifying-glass"></i></li>
+                    <li id="glass">Search  
+                        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                    </li>
                 </ul>
             </div>
         </div>
@@ -122,6 +124,22 @@
         <div class="note1"></div>
         <div class="note1"></div>
         <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
+        <div class="note1"></div>
 
     </div>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
@@ -129,7 +147,7 @@
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: "넘어", size: 50 },
+            data: { query: "무제", size: 50 },
             headers: { Authorization: "KakaoAK 4b0905b291a261ae8f16e3c80a8272e2" }
         })
             .done(function (msg) {
@@ -256,7 +274,7 @@
                 $.ajax({
                     method: "GET",
                     url: "https://dapi.kakao.com/v3/search/book?target=title",
-                    data: { query: "긍정의", size: 50 },
+                    data: { query: "bootcamp", size: 50 },
                     headers: { Authorization: "KakaoAK 4b0905b291a261ae8f16e3c80a8272e2" }
                 })
                     .done(function (msg) {
@@ -297,7 +315,7 @@
     <div id="buy">
         <div id="buy-wrap">
             <div id="buy-tit">
-                <p id="buy-titfont">전 세계 베스트 셀러를 한자리에서 무료로 읽어보실 수 있습니다.</p>
+                <p class="buy-titfont">전 세계 베스트 셀러를 한자리에서 무료로 읽어보실 수 있습니다.</p>
                 <div id="buy-box">
                     <div class="buy-ex">
                         <i class="fa-solid fa-earth-americas"></i><br>
@@ -315,7 +333,7 @@
                         <p class="buy-tt">>1 billion</p><br>
                         <p class="buy-exx">OF USERS WATCH STORIES EVERY DAY</p></div>
                 </div>
-                <span>원하는 책을 찾을 수 없습니까? <br><a href="#">Amazonbooks 고객센터</a>로 문의를 주시면 친절하게 응대 도와드리겠습니다.</span>
+                <p class="buy-titfont">원하는 책을 찾으실 수 없다면 아래의 링크를 통해 문의해주세요. <br><p class="buy-titfont2"><a href="#">아마존북스 문의하기</a></p>
 
                 
 

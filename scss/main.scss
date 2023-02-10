@@ -5,7 +5,7 @@ $subColor: pink;
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: 'Anton', sans-serif;
+    font-family: 'sans-serif';
 }
 
 ol,
@@ -19,30 +19,32 @@ li {
 
 #nav-wrap {
     width: 100%;
-    height: 800px;
+    height: 400px;
 
     #nav {
         width: 85%;
         height: 100px;
         background-color: gold;
         margin: 0 auto;
-        padding-top: 100px;
 
-        ul { width: 90%;
+        ul {
+            width: 100%;
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             // background-color:beige;
-            margin:0 auto;
+            margin: 0 auto;
 
             li {
                 width: 100%;
                 height: 100%;
                 margin: 0 30px;
-                font-size: 23px;
-                line-height: 140px;
+                font-size: 15px;
+                font-weight: bold;
+                line-height:130px;
                 
+
 
                 a:link {
                     color: black;
@@ -64,11 +66,12 @@ li {
 #logo img {
     width: 400px;
     height: 77px;
-    padding-top: 30px;
+    margin-top: 30px;
 }
 
 #glass i {
     transform: scaleX(-1);
+    font-size:15px;
 }
 
 
@@ -100,15 +103,39 @@ section {
                 transform: translate(-50, -50);
                 background-color: rgba(169, 169, 169, 0.493);
                 z-index: 10;
-                margin:0 auto;
+                margin: 0 auto;
                 margin-top: 200px;
-                display:flex; flex-direction:column; justify-content: center; align-items: center;
-                .text-t{font-size: 30px; font-weight: bolder; margin: 20px 0;}
-                
-                hr{width: 50%; border: 0.5px solid wheat; margin: 0 auto;}
-                .text-main{font-size: 100px; margin: 50px 0;}
-                .text-main:hover{color:rgb(146, 107, 56); cursor:poiner;}
-                .text-ex{font-size:25px; margin: 40px 0; }
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .text-t {
+                    font-size: 30px;
+                    font-weight: bolder;
+                    margin: 20px 0;
+                }
+
+                hr {
+                    width: 50%;
+                    border: 0.5px solid rgb(255, 153, 0);
+                    margin: 0 auto;
+                }
+
+                .text-main {
+                    font-size: 100px;
+                    margin: 50px 0;
+                }
+
+                .text-main:hover {
+                    color: rgb(255, 153, 0);
+                    cursor: poiner;
+                }
+
+                .text-ex {
+                    font-size: 25px;
+                    margin: 40px 0;
+                }
             }
 
             img {
@@ -130,7 +157,7 @@ section {
     height: 700px;
     // background-color: rgba(185, 30, 30, 0.445);
     position: absolute;
-    top: 400px;
+    top: 100px;
     left: 0;
     z-index: 100;
     display: flex;
@@ -138,58 +165,217 @@ section {
     align-items: center;
 
     .note1 {
-        width: 70px;
-        height: 700px;
-        background-color: darkred;
+        width: 30px;
+        height: 450px;
+        background-color: rgb(255, 153, 0);
         color: white;
-        margin: 0 20px;
+        margin: 0 5px;
         writing-mode: vertical-lr;
-        display:flex;
+        display: flex;
         justify-content: space-between;
-        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
-        #title{font-size: 18px; float:left; margin:0 auto; text-align:center; margin: 0 20px;}
-        #writer{font-size:15px; margin: 40px 25px;}
-        a:link{margin: 20px 0 0 0; color:antiquewhite;}
-        
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+        #title {
+            font-size: 13px;
+            float: left;
+            margin: 0 auto;
+            text-align: center;
+            padding: 5px 0;
+            font-weight: bolder;
+        }
+
+        #writer {
+            font-size: 12px;
+            padding: 20px 0;
+            text-align: center;
+            margin: 0 auto;
+           
+        }
+
+        a:link {
+            margin: 20px 0 0 0;
+            color: antiquewhite;
+        }
+
     }
-    .note1:hover{box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;}
+
+    .note1:hover {
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; cursor:pointer;
+    }
 }
 
 #best-seller {
     width: 100%;
     height: 1300px;
     background-color: burlywood;
-    #best-seller-wrap{width: 80%; height: 1200px; background-color:white; margin: 0 auto; padding-top: 50px;
-    .best-title{display:flex; flex-direction: column; justify-content: space-evenly; align-items: center;
-        #best-t{font-size: 30px; margin: 10px 0 0 0 ;}
-        .best-line1{width: 100%; border:1px solid lightgray; margin: 5px 0;}
-        .best-line2{width: 100%; border:1px solid black; margin: 5px 0;}
-        #best-ex{font-size: 15px;}
-    }}
-    .select{width: 95%; display:flex; justify-content: space-between; align-items: center;margin: 10px 0; }
-    .line1{width: 95%; height: 320px; background-color: gold; display:flex; justify-content: space-evenly; align-items: center; margin: 0 auto;
-        .b1{width: 200px; height:300px; background-color:white;position:relative; text-align:center; display:flex; justify-content: space-between; align-items: center; flex-direction: column;}
-        .num{width: 20px; height: 70px; background-color: white; color: gray; font-size: 40px;
-            position:absolute; top:0; left:0; z-index:100;}
-        #line1-bt{width: 100px; height: 30px; background-color: skyblue; border:1px solid transparent; cursor:pointer; }
-        #line1-bt:hover{color:white; background-color:black;}}
-    
+
+    #best-seller-wrap {
+        width: 80%;
+        height: 1200px;
+        background-color: white;
+        margin: 0 auto;
+        padding-top: 50px;
+
+        .best-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+
+            #best-t {
+                font-size: 30px;
+                margin: 10px 0 0 0;
+            }
+
+            .best-line1 {
+                width: 100%;
+                border: 1px solid lightgray;
+                margin: 5px 0;
+            }
+
+            .best-line2 {
+                width: 100%;
+                border: 1px solid black;
+                margin: 5px 0;
+            }
+
+            #best-ex {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .select {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .line1 {
+        width: 95%;
+        height: 320px;
+        background-color: gold;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 auto;
+
+        .b1 {
+            width: 200px;
+            height: 300px;
+            background-color: white;
+            position: relative;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .num {
+            width: 20px;
+            height: 70px;
+            background-color: white;
+            color: gray;
+            font-size: 40px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+
+        #line1-bt {
+            width: 100px;
+            height: 30px;
+            background-color: skyblue;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        #line1-bt:hover {
+            color: white;
+            background-color: black;
+        }
+    }
+
 }
 
 #buy {
     width: 100%;
-    height:600px;position:relative;
-    background-color: rgb(255, 153, 0); display:flex; justify-content: center; align-items: center;
-    #buy-wrap{width: 100%; height: 500px; background-image: url(../img/books-with-amazon-smile_331427528_21-9_1280.jpg); background-size:cover; background-position:contain; margin: 0 auto; }
-    #buy-tit{width: 80%; height: 400px; background-color:rgba(128, 128, 128, 0.445); margin: 0 auto; text-align:center; display:flex; flex-direction: column; justify-content: space-evenly; align-items: center; position:absolute; z-index:10; top:0; left: 50%; transform: translate(-50%,10%);
-    #buy-titfont{font-size: 35px; margin: 20px 0; font-weight: bolder;}
+    height: 600px;
+    position: relative;
+    background-color: rgb(255, 153, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    #buy-box{width: 100%; height: 150px;display:flex; justify-content: space-evenly; align-items: center;
-        .buy-ex{width: 30%; height: 200px; background-color:rgba(255, 255, 255, 0.473);
-        i{font-size: 80px;}
-        .buy-tt{font-size:40px; color: rgb(255, 153, 0);}
-        .buy-exx{font-size:17px; color:gray;}}}}
+    #buy-wrap {
+        width: 100%;
+        height: 500px;
+        // background-image: url(../img/books-with-amazon-smile_331427528_21-9_1280.jpg);
+        background-size: cover;
+        background-position: contain;
+        margin: 0 auto;
+    }
+
+    #buy-tit {
+        width: 80%;
+        height: 400px;
+        background-color: rgba(128, 128, 128, 0.445);
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 10%);
+
+        .buy-titfont {
+            font-size: 20px;
+            margin: 20px 0;
+            font-weight: bolder;
+        }
+
+        .byu-titfont2 {
+            font-size: 15px;
+            margin: 20px 0;
+        }
+
+        #buy-box {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .buy-ex {
+                width: 30%;
+                height: 200px;
+                background-color: rgba(255, 255, 255, 0.473);
+
+                i {
+                    font-size: 80px;
+                }
+
+                .buy-tt {
+                    font-size: 40px;
+                    color: rgb(255, 153, 0);
+                }
+
+                .buy-exx {
+                    font-size: 17px;
+                    color: gray;
+                }
+            }
+        }
+    }
 }
 
 #chronicle {

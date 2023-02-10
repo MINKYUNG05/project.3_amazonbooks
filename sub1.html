@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <style>
+        .book {
+            width: 100%;
+            height: 1000px;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .side {
+            width: 40px;
+            height: 400px;
+            margin: 0 1px 0 0;
+            text-align: center;
+           
+        }
+
+        .side-fill {
+            width: 40px;
+            height: 400px;
+            border: 1px solid lightgoldenrodyellow;
+            background-color: rgb(134, 71, 71);
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+
+        .side-fill:hover {
+            cursor: pointer;
+        }
+
+        .side-fill2 {
+            transform-origin:right center;
+            -webkit-transform: rotateY(45deg);
+            transform: perspective(1500px) rotateY(95deg);
+         
+            
+        }
+
+        .main {
+            width: 300px;
+            height: 400px;
+            text-align: center;
+            
+        }
+
+        .main-fill {
+            width: 300px;
+            height: 400px;
+            background-color: lightcoral;
+            border: 1px solid lightgoldenrodyellow;
+            text-align: center;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            transform-origin: left;
+            -webkit-transform: rotateY(45deg);
+            transform: perspective(1000px) rotateY(90deg);
+
+            
+            /* transform-origin: left;
+            -webkit-transform: rotateY(-45deg);
+            transform: rotateY(-95deg); */
+        }
+
+        .main-fill:hover {
+            cursor: pointer;
+        }
+
+        .main-fill2 { transform-origin: left;
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+           
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="book">
+        <div class="side">
+            <div class="side-fill">side</div>
+        </div>
+
+        <div class="main">
+            <div class="main-fill">main</div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".side-fill").click(function () {
+                $(this).toggleClass('side-fill2');
+                $(".main-fill").toggleClass('main-fill2');
+                $(".side-fill").fadeOut();
+            });
+
+
+        });
+
+    </script>
+</body>
+
+</html>

@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  font-family: "Anton", sans-serif;
+  font-family: "sans-serif";
 }
 
 ol,
@@ -14,17 +14,16 @@ li {
 
 #nav-wrap {
   width: 100%;
-  height: 800px;
+  height: 400px;
 }
 #nav-wrap #nav {
   width: 85%;
   height: 100px;
   background-color: gold;
   margin: 0 auto;
-  padding-top: 100px;
 }
 #nav-wrap #nav ul {
-  width: 90%;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -35,8 +34,9 @@ li {
   width: 100%;
   height: 100%;
   margin: 0 30px;
-  font-size: 23px;
-  line-height: 140px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 130px;
 }
 #nav-wrap #nav ul li a:link {
   color: black;
@@ -51,11 +51,12 @@ li {
 #logo img {
   width: 400px;
   height: 77px;
-  padding-top: 30px;
+  margin-top: 30px;
 }
 
 #glass i {
   transform: scaleX(-1);
+  font-size: 15px;
 }
 
 section {
@@ -99,7 +100,7 @@ section .swiper .swiper-slide .text .text-t {
 }
 section .swiper .swiper-slide .text hr {
   width: 50%;
-  border: 0.5px solid wheat;
+  border: 0.5px solid rgb(255, 153, 0);
   margin: 0 auto;
 }
 section .swiper .swiper-slide .text .text-main {
@@ -107,7 +108,7 @@ section .swiper .swiper-slide .text .text-main {
   margin: 50px 0;
 }
 section .swiper .swiper-slide .text .text-main:hover {
-  color: rgb(146, 107, 56);
+  color: rgb(255, 153, 0);
   cursor: poiner;
 }
 section .swiper .swiper-slide .text .text-ex {
@@ -126,7 +127,7 @@ section .swiper .swiper-slide img {
   width: 100%;
   height: 700px;
   position: absolute;
-  top: 400px;
+  top: 100px;
   left: 0;
   z-index: 100;
   display: flex;
@@ -134,33 +135,37 @@ section .swiper .swiper-slide img {
   align-items: center;
 }
 #book-animation .note1 {
-  width: 70px;
-  height: 700px;
-  background-color: darkred;
+  width: 30px;
+  height: 450px;
+  background-color: rgb(255, 153, 0);
   color: white;
-  margin: 0 20px;
+  margin: 0 5px;
   writing-mode: vertical-lr;
   display: flex;
   justify-content: space-between;
-  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 #book-animation .note1 #title {
-  font-size: 18px;
+  font-size: 13px;
   float: left;
   margin: 0 auto;
   text-align: center;
-  margin: 0 20px;
+  padding: 5px 0;
+  font-weight: bolder;
 }
 #book-animation .note1 #writer {
-  font-size: 15px;
-  margin: 40px 25px;
+  font-size: 12px;
+  padding: 20px 0;
+  text-align: center;
+  margin: 0 auto;
 }
 #book-animation .note1 a:link {
   margin: 20px 0 0 0;
   color: antiquewhite;
 }
 #book-animation .note1:hover {
-  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  cursor: pointer;
 }
 
 #best-seller {
@@ -260,7 +265,6 @@ section .swiper .swiper-slide img {
 #buy #buy-wrap {
   width: 100%;
   height: 500px;
-  background-image: url(../img/books-with-amazon-smile_331427528_21-9_1280.jpg);
   background-size: cover;
   background-position: contain;
   margin: 0 auto;
@@ -281,10 +285,14 @@ section .swiper .swiper-slide img {
   left: 50%;
   transform: translate(-50%, 10%);
 }
-#buy #buy-tit #buy-titfont {
-  font-size: 35px;
+#buy #buy-tit .buy-titfont {
+  font-size: 20px;
   margin: 20px 0;
   font-weight: bolder;
+}
+#buy #buy-tit .byu-titfont2 {
+  font-size: 15px;
+  margin: 20px 0;
 }
 #buy #buy-tit #buy-box {
   width: 100%;
