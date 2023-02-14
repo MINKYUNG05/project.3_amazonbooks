@@ -12,6 +12,7 @@
     <!-- webfont-icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+ 
 
     <!-- css/js -->
     <link rel="stylesheet" href="css/main.css">
@@ -43,6 +44,276 @@
             </div>
         </div>
     </header>
+
+    <div id="book-animation">
+       
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+        <div class="book-wrap">
+            <div class="side">
+                <div class="side-fill"></div>
+            </div>
+
+            <div class="main">
+                <div class="main-fill"></div>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+       
+    $(document).ready(function () {
+        $(".book-wrap").click(function () {
+            $(this).children('.side').find('.side-fill').addClass('side-fill2');
+            $(this).siblings().children('.side').find('.side-fill').delay(4000).removeClass('side-fill2');
+            //사이드 닫히는 구간1
+            $(this).animate({width: "400px"}); 
+            //메인화면이 열리는 구간
+            $(this).children(".main").find(".main-fill").addClass('main-fill2');
+            //메인애니메이션 작동
+            $(this).siblings().children('.main').find('.main-fill').delay(4000).removeClass('main-fill2');
+            //메인 애니메이션 닫히는 구간
+            
+            $(this).siblings().animate({width: "50px"},1000);
+            //메인 이미지 사라지는 구간
+        });
+    });
+    </script>
+
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
+    <script>
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: "line", size: 50 },
+            headers: { Authorization: "KakaoAK 4b0905b291a261ae8f16e3c80a8272e2" }
+        })
+            .done(function (msg) {
+
+                // for문 (8개)
+                var boxs = document.getElementsByClassName('side-fill');
+                for (var i = 0; i < boxs.length; i++) {
+                    $(".side-fill").eq(i).append("<p id=title>" + '<a href="#">' + msg.documents[i].title + "</a>" + "</p>");
+                    $(".side-fill").eq(i).append("<p id=writer>" + msg.documents[i].authors + "</p>");
+                    $(".main-fill").eq(i).append("<p id=title>" + '<a href="#">' + msg.documents[i].title + "</a>" + "</p>");
+                    $(".main-fill").eq(i).append("<p id=writer>" + msg.documents[i].authors + "</p>");
+
+                }
+
+            });
+    </script>
+
 
     <section>
         <div class="swiper mySwiper">
@@ -109,66 +380,7 @@
         });
     </script>
 
-    <div id="book-animation">
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-        <div class="note1"></div>
-
-    </div>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.0.min.js"></script>
-    <script>
-        $.ajax({
-            method: "GET",
-            url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: "무제", size: 50 },
-            headers: { Authorization: "KakaoAK 4b0905b291a261ae8f16e3c80a8272e2" }
-        })
-            .done(function (msg) {
-
-
-                // for문 (8개)
-                var boxs = document.getElementsByClassName('note1');
-
-
-                for (var i = 0; i < boxs.length; i++) {
-
-                    $(".note1").eq(i).append("<p id=title>" + '<a href="sub_book13.html">' + msg.documents[i].title + "</a>" + "</p>");
-
-
-                    $(".note1").eq(i).append("<p id=writer>" + msg.documents[i].authors + "</p>");
-
-
-                }
-
-            });
-    </script>
+    
 
     <div id="best-seller">
         <div id="best-seller-wrap">

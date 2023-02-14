@@ -19,7 +19,7 @@ li {
 
 #nav-wrap {
     width: 100%;
-    height: 400px;
+    height: 130px;
 
     #nav {
         width: 85%;
@@ -153,57 +153,125 @@ section {
 }
 
 #book-animation {
-    width: 100%;
-    height: 700px;
-    // background-color: rgba(185, 30, 30, 0.445);
-    position: absolute;
-    top: 100px;
-    left: 0;
-    z-index: 100;
+    width: 95%;
+    height: 550px;
+    background-color: rgba(250, 235, 215, 0.623);
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    margin: 0 auto;
     align-items: center;
+    justify-content: space-evenly;
+    // position:absolute;
+    // top:100px;
+    // left:0;
+    // z-index: 100;
+    // transform: translate(5%, 5%);
 
-    .note1 {
-        width: 30px;
-        height: 450px;
-        background-color: rgb(255, 153, 0);
-        color: white;
-        margin: 0 5px;
-        writing-mode: vertical-lr;
+    .book-wrap {
+        width: 50px;
+        height: 550px;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        // position:absolute;
 
-        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-
-        #title {
-            font-size: 13px;
-            float: left;
-            margin: 0 auto;
+        .side {
+            width: 40px;
+            height: 600px;
             text-align: center;
-            padding: 5px 0;
-            font-weight: bolder;
-        }
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            
+         
+            
+            #title{font-size:13px; font-weight: bolder;  margin: 30px 10px; }
+            #writer{font-size:11px;  margin: 30px 12px; }
 
-        #writer {
-            font-size: 12px;
-            padding: 20px 0;
-            text-align: center;
-            margin: 0 auto;
+            .side-fill {
+                width: 40px;
+                height: 500px;
+                border: 1px solid transparent;
+                background-color: rgb(255, 153, 0);
+                -webkit-transition: 1s;
+                transition: all 1s;
+                // position:absolute;
+                display:flex;
+                justify-content: space-between;
+                writing-mode: vertical-lr;
+                margin : 0 auto;
+                text-align: center;
+
+    
+                
+            }
+           
+            .side-fill:hover {
+                cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
            
         }
 
-        a:link {
-            margin: 20px 0 0 0;
-            color: antiquewhite;
+        }
+        
+
+        .main {
+            width: 0px;
+            height: 600px;
+            text-align: center;
+            margin-top: 100px;
+            
+            /* display:none; */
+            // position:absolute;
+
+            .main-fill {
+                width: 300px;
+                height: 500px;
+                background-color: rgb(233, 140, 2);
+                border: 1px solid transparent;
+                text-align: center;
+                -webkit-transition: 1.2s;
+                transition: 1.2s;
+                transform-origin: left;
+                -webkit-transform: rotateY(45deg);
+                transform: perspective(2000px) rotateY(90deg);
+                // position:absolute;
+                /* display: none; */
+             
+               
+
+            }
+
+            .main-fill2 {
+                transform-origin: left;
+                -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+                margin-right: 20px;
+            
+            
+            }
+            .main-fill:hover {
+                cursor: pointer;
+         
+            }
+            
         }
 
     }
-
-    .note1:hover {
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; cursor:pointer;
-    }
 }
+
+
+
+.side-fill2 {
+    transform-origin: right;
+    -webkit-transform: rotateY(45deg);
+    transform: perspective(4000px) rotateY(90deg);
+    margin-right: -20px;
+    
+}
+
+
 
 #best-seller {
     width: 100%;
@@ -471,3 +539,5 @@ footer {
         }
     }
 }
+
+
