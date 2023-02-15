@@ -15,11 +15,15 @@ li {
     list-style-type: none;
 }
 
+a:active{color:white;}
+a:link{color:white;}
+a:visited{color:white;}
+
 // header
 
 #nav-wrap {
     width: 100%;
-    height: 130px;
+    height: 400px;
 
     #nav {
         width: 85%;
@@ -95,6 +99,9 @@ section {
             justify-content: center;
             align-items: center;
             position: relative;
+            cursor: grabbing;
+
+            
 
             .text {
                 width: 80%;
@@ -129,7 +136,7 @@ section {
 
                 .text-main:hover {
                     color: rgb(255, 153, 0);
-                    cursor: poiner;
+                    cursor: pointer;
                 }
 
                 .text-ex {
@@ -149,31 +156,39 @@ section {
 
             }
         }
+
+        .swiper-pagination{bottom:90px;
+            .swiper-pagination-bullet{background-color: rgb(138, 119, 71); opacity: 0.7; width: 15px; height: 15px;}
+            .swiper-pagination-bullet-active{ background-color:rgb(255, 153, 0); transform: scale(1.2);} 
+        }
     }
 }
 
 #book-animation {
     width: 95%;
     height: 550px;
-    background-color: rgba(250, 235, 215, 0.623);
+    // background-color: rgba(250, 235, 215, 0.623);
     margin: 0 auto;
     display: flex;
-    margin: 0 auto;
     align-items: center;
-    justify-content: space-evenly;
-    // position:absolute;
-    // top:100px;
-    // left:0;
-    // z-index: 100;
+    justify-content:center;
+
+    position:absolute;
+    top:140px;
+    left:40px;
+    z-index: 100;
     // transform: translate(5%, 5%);
 
+    
+
     .book-wrap {
-        width: 50px;
-        height: 550px;
+        width: 40px;
+        height: 590px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         overflow: hidden;
+        margin: 0 5px;
         // position:absolute;
 
         .side {
@@ -187,13 +202,13 @@ section {
          
             
             #title{font-size:13px; font-weight: bolder;  margin: 30px 10px; }
-            #writer{font-size:11px;  margin: 30px 12px; }
+            #writer{font-size:11px;  margin: 30px 12px; font-weight: bolder;}
 
             .side-fill {
                 width: 40px;
                 height: 500px;
-                border: 1px solid transparent;
-                background-color: rgb(255, 153, 0);
+                // border: 1px solid transparent;
+                background-color: rgb(214, 50, 0);
                 -webkit-transition: 1s;
                 transition: all 1s;
                 // position:absolute;
@@ -209,7 +224,7 @@ section {
            
             .side-fill:hover {
                 cursor: pointer;
-                box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+                box-shadow: rgba(10, 10, 19, 0.322) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
            
         }
 
@@ -228,8 +243,8 @@ section {
             .main-fill {
                 width: 300px;
                 height: 500px;
-                background-color: rgb(233, 140, 2);
-                border: 1px solid transparent;
+                background-color: rgb(177, 41, 0);
+                // border: 1px solid transparent;
                 text-align: center;
                 -webkit-transition: 1.2s;
                 transition: 1.2s;
@@ -238,10 +253,18 @@ section {
                 transform: perspective(2000px) rotateY(90deg);
                 // position:absolute;
                 /* display: none; */
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                margin-left:-4px;
              
-               
+               .deco{width: 258px; height: 110px; position:absolute; z-index:101; margin-top:47px;}
 
             }
+
+            #title2{font-size:17px; margin: 90px 20px 0 20px; color:white; font-weight: bolder;}
+            #writer2{font-size: 13px;margin-bottom: 40px; font-weight: bolder;}
 
             .main-fill2 {
                 transform-origin: left;
@@ -253,6 +276,8 @@ section {
             }
             .main-fill:hover {
                 cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.795) 0px 20px 30px -10px;
+
          
             }
             
@@ -266,7 +291,7 @@ section {
 .side-fill2 {
     transform-origin: right;
     -webkit-transform: rotateY(45deg);
-    transform: perspective(4000px) rotateY(90deg);
+    transform: perspective(14000px) rotateY(90deg);
     margin-right: -20px;
     
 }
@@ -281,7 +306,7 @@ section {
     #best-seller-wrap {
         width: 80%;
         height: 1200px;
-        background-color: white;
+        background-color: lightslategray;
         margin: 0 auto;
         padding-top: 50px;
 
@@ -334,7 +359,7 @@ section {
         .b1 {
             width: 200px;
             height: 300px;
-            background-color: white;
+            background-color: lightslategray;
             position: relative;
             text-align: center;
             display: flex;
@@ -344,7 +369,7 @@ section {
         }
 
         .num {
-            width: 20px;
+            width: 50px;
             height: 70px;
             background-color: white;
             color: gray;
@@ -422,24 +447,29 @@ section {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
+            
 
             .buy-ex {
                 width: 30%;
                 height: 200px;
                 background-color: rgba(255, 255, 255, 0.473);
+                
 
                 i {
                     font-size: 80px;
+                    margin-top: 20px;
                 }
 
                 .buy-tt {
                     font-size: 40px;
                     color: rgb(255, 153, 0);
+                    font-weight: bolder;
                 }
 
                 .buy-exx {
                     font-size: 17px;
                     color: gray;
+                    font-weight: bolder;
                 }
             }
         }
