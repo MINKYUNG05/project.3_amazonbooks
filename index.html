@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon_Books</title>
+    <title>Books | Amazon</title>
     <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon (2).ico" type="image/x-icon">
 
     <!-- webfont-icon -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
- 
+
 
     <!-- css/js -->
     <link rel="stylesheet" href="css/main.css">
-
-    <link rel="stylesheet" href="js/main.js">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/main.js"></script>
 
 
 
@@ -37,7 +37,7 @@
                     <li id="logo"><a href="#"><img src="img/Amazon_Books.png" alt="amazonbooks"></a></li>
                     <li><a href="#">E-books</a></li>
                     <li><a href="#">음반</a></li>
-                    <li id="glass">블루레이  
+                    <li id="glass">블루레이
                         <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
                     </li>
                 </ul>
@@ -47,40 +47,43 @@
 
 
     <div id="popup">
-       
+
         <div id="popup-wrap">
-       <img src="img/white-prr._CB406211874_.png" alt="amazon_logo">
-       <p class="prime-reading">Learn more about Prime Reading benefits <i class="fa-solid fa-angle-up"></i></p>
-       <button>Join Prime</button>
+            <img src="img/white-prr._CB406211874_.png" alt="amazon_logo">
+            <p class="prime-reading">Prime Reading benefits 더 알아보기 <i class="fa-solid fa-angle-up"></i></p>
+            <button><a href="https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&">Join Prime</a></button>
         </div>
         <!-- //나타나는 팝업 -->
         <div id="popup-open">
             <div id="popup-tit">아마존프라임 회원이 되면 경험 할 수 있는 혜택!</div>
             <div id="popup1">
                 <div class="popbox"><img src="img/audiobooks._CB406211901_.png" alt="reading">
-                <p>전자책 및 오디오북 카탈로그 무제한 액세스</p></div>
+                    <p>전자책 및 오디오북 카탈로그 무제한 액세스</p>
+                </div>
                 <div class="popbox"><img src="img/prerelease._CB406211874_.png" alt="reading">
-                <p>매월 1권의 무료 사전 공개 전자책 제공</p></div>
+                    <p>매월 1권의 무료 사전 공개 전자책 제공</p>
+                </div>
                 <div class="popbox"><img src="img/magsarticles._CB406211874_.png" alt="reading">
-                <p>잡지와 만화책 또한 대여 가능</p></div>
+                    <p>잡지와 만화책 또한 대여 가능</p>
+                </div>
             </div>
             <div id="popup2">
                 <img src="img/white-prr._CB406211874_.png" alt="amazon_logo">
-                <p class="prime-reading">Close <i class="fa-solid fa-chevron-down"></i></p>
-                <button>Join Prime</button>
+                <p class="prime-reading">내리기 <i class="fa-solid fa-chevron-down"></i></p>
+                <button><a href="https://www.amazon.com/ap/signin?openid.pape.max_auth_age=0&openid.return_to=https%3A%2F%2Fwww.amazon.com%2F%3Fref_%3Dnav_ya_signin&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=usflex&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&">Join Prime</a></button>
             </div>
         </div>
     </div>
     <script>
-         $(".prime-reading").click(function () {
-            $(this).parent().next('#popup-open').fadeIn();
-         });
+        $(".prime-reading").click(function () {
+            $('#popup-open').slideToggle();
+        });
 
     </script>
 
 
     <div id="book-animation">
-       
+
         <div class="book-wrap">
             <div class="side">
                 <div class="side-fill"></div>
@@ -323,34 +326,34 @@
 
 
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    
     <script>
-       
-    $(document).ready(function () {
+
+        $(document).ready(function () {
             //웹사이트 들어갈때 책이 열리는 구간
             $(".book-wrap").eq(11).children('.side').find('.side-fill').addClass('side-fill2');
             $(".book-wrap").eq(11).siblings().children('.side').find('.side-fill').delay(4000).removeClass('side-fill2');
             //사이드 닫히는 구간1
-            $(".book-wrap").eq(11).animate({width: "370px"}); 
+            $(".book-wrap").eq(11).animate({ width: "370px" });
             //메인화면이 열리는 구간
             $(".book-wrap").eq(11).children(".main").find(".main-fill").addClass('main-fill2');
             //메인애니메이션 작동
 
-        $(".book-wrap").click(function () {
-            $(this).children('.side').find('.side-fill').addClass('side-fill2');
-            $(this).siblings().children('.side').find('.side-fill').delay(4000).removeClass('side-fill2');
-            //사이드 닫히는 구간1
-            $(this).animate({width: "400px"}); 
-            //메인화면이 열리는 구간
-            $(this).children(".main").find(".main-fill").addClass('main-fill2');
-            //메인애니메이션 작동
-            $(this).siblings().children('.main').find('.main-fill').delay(4000).removeClass('main-fill2');
-            //메인 애니메이션 닫히는 구간
-            
-            $(this).siblings().animate({width: "50px"},1000);
-            //메인 이미지 사라지는 구간
+            $(".book-wrap").click(function () {
+                $(this).children('.side').find('.side-fill').addClass('side-fill2');
+                $(this).siblings().children('.side').find('.side-fill').delay(4000).removeClass('side-fill2');
+                //사이드 닫히는 구간1
+                $(this).animate({ width: "400px" });
+                //메인화면이 열리는 구간
+                $(this).children(".main").find(".main-fill").addClass('main-fill2');
+                //메인애니메이션 작동
+                $(this).siblings().children('.main').find('.main-fill').delay(4000).removeClass('main-fill2');
+                //메인 애니메이션 닫히는 구간
+
+                $(this).siblings().animate({ width: "50px" }, 1000);
+                //메인 이미지 사라지는 구간
+            });
         });
-    });
 
 
     </script>
@@ -361,7 +364,7 @@
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: "설레임", size: 50 },
+            data: { query: "삶의", size: 50 },
             headers: { Authorization: "KakaoAK 4b0905b291a261ae8f16e3c80a8272e2" }
         })
             .done(function (msg) {
@@ -369,7 +372,7 @@
                 // for문 (8개)
                 var boxs = document.getElementsByClassName('side-fill');
                 for (var i = 0; i < boxs.length; i++) {
-                    $(".side-fill").eq(i).append("<p id=title>" + msg.documents[i].title  + "</p>");
+                    $(".side-fill").eq(i).append("<p id=title>" + msg.documents[i].title + "</p>");
                     $(".side-fill").eq(i).append("<p id=writer>" + msg.documents[i].authors + "</p>");
                     $(".main-fill").eq(i).append("<p id=title2>" + msg.documents[i].title + "</p>");
                     $(".main-fill").eq(i).append("<p id=writer2>" + msg.documents[i].authors + "</p>");
@@ -401,7 +404,8 @@
                     </div>
                 </div>
 
-                <div class="swiper-slide"><img src="img/kids-reading-a-book-at-night-under-the-blankets-by-Lisa-Tichane.jpg" alt="book">
+                <div class="swiper-slide"><img
+                        src="img/kids-reading-a-book-at-night-under-the-blankets-by-Lisa-Tichane.jpg" alt="book">
                     <div class="text">
                         <p class="text-t">AMAZON BOOKS 의 새로운 특별 프로젝트</p>
                         <hr>
@@ -444,7 +448,7 @@
         });
     </script>
 
-    
+
 
     <div id="best-seller">
         <div id="best-seller-wrap">
@@ -577,7 +581,7 @@
                             var str = msg.documents[i].contents;
                             var str2 = str.substring(0, 200);
 
-                            $(".b1").eq(i).append("<h5>"  + str2 +  "</h5>");
+                            $(".b1").eq(i).append("<h5>" + str2 + "</h5>");
                             $(".b1").eq(i).append('<button id="line1-bt">' + "Add to Cart" + "</button>");
 
                         }
@@ -590,9 +594,9 @@
 
     <div id="buy">
         <div id="buy-wrap">
-            <!-- <img src="img/henry-be--Pg63JThyCg-unsplash.jpg" alt="smile"> -->
+            <!-- <img src="img/books.jpg" alt="smile"> -->
             <div id="buy-tit">
-                <p class="buy-titfont">아마존북스는 늘 여러분의 곁에 있습니다.</p>
+                <p class="buy-titfont">지금까지 상상 할 수 없었던 책의 세계로 여러분을 안내합니다.</p>
                 <div id="buy-box">
                     <div class="buy-ex">
                         <i class="fa-solid fa-earth-americas"></i><br>
@@ -608,51 +612,204 @@
                     <div class="buy-ex"><i class="fa-solid fa-users"></i>
                         <br>
                         <p class="buy-tt">>1 billion</p><br>
-                        <p class="buy-exx">하루 한권 이상의 독서를 하는 이용자 수</p></div>
+                        <p class="buy-exx">하루 한권 이상의 독서를 하는 이용자 수</p>
+                    </div>
                 </div>
-                <p class="buy-titfont">남녀노소 누구나 지금까지 상상 할 수 없었던 책의 세계로 여러분을 안내합니다. <br><p class="buy-titfont2">만약 찾으시는 책이 없으시다면 <a href="#" class="buy-titfont3">아마존북스</a>로 문의해주세요.</p>
-
                 
+                <p class="buy-titfont2">만약 찾으시는 책이 없으시다면 <a href="http://amazon.com" class="buy-titfont3">아마존북스</a>로 문의해주세요.</p>
 
-                </div>
-            
+
+
+            </div>
+
             <div></div>
         </div>
     </div>
 
 
-    <div id="chronicle"></div>
+    <div id="chart">
+        <div id="chart-wrap">
+            
+        <div id="chart-title">
+            <p> <i class="fa-solid fa-chevron-left"></i> WEEK OF <span>FEBRUARY 12, 2023</span> </p>
+            <p>Amazon Charts</p>
+            <p>The Top 20 Most Sold & Most Read Books of the Week <i class="fa-regular fa-circle-question"></i></p>
+        </div>
+
+        <div id="chart-menu">
+           <p> MOST READ </p>
+           <p> MOST SOLD </p>
+        </div>
+
+        <div id="chart-submenu">
+            <p id="fic"> FICTION </p>
+            <p id="nonfic"> NON-FICTION </p>
+         </div>
+
+         <div class="chart1">
+            <div class="chart-box"><div class="chart-book"></div></div>
+            <div class="chart-box"><div class="chart-book"></div></div>
+            <div class="chart-box"><div class="chart-book"></div></div>
+         </div>
+
+
+
+
+            <div id="chart-img">
+                <p><a id="underline">View any corrections.</a> Your feedback helps us improve future products. Please email <a id="blue">charts-feedback@amazon.com </a>with any suggestions.</p>
+                <img src="img/amazon-charts-logo.svg" alt="chart">
+            </div>
+
+         <script>
+            $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title",
+                data: { query: "해리포터와", size: 50 },
+                headers: { Authorization: "KakaoAK 4b0905b291a261ae8f16e3c80a8272e2" }
+            })
+                .done(function (msg) {
+
+
+                    // for문 (8개)
+                    var boxs = document.getElementsByClassName('chart-book');
+
+
+                    for (var i = 0; i < boxs.length; i++) {
+
+                        $(".chart-book").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                        $(".chart-book").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
+
+
+                        $(".chart-book").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
+
+
+                        // //선택한 select option 값 title로 가져오기 
+                        // var booktitle = msg.documents[i].title;
+                        // $('#book>option').eq(i).text(booktitle);
+
+
+                        // var str = msg.documents[i].contents;
+                        // var str2 = str.substring(0, 200);
+
+                        // $(".chart-box").eq(i).append("<h5>" + str2 + "</h5>");
+                        // $(".chart-box").eq(i).append('<button id="line1-bt">' + "Add to Cart" + "</button>");
+
+                    }
+
+                });
+
+                $(document).ready(function (){
+            $('#fic').addClass('fic-effect');
+        });
+
+        </script>
+         
+    </div> 
+    </div>
+
+<!-- //기타 -->
     <div id="talk"></div>
     <div id="ending"></div>
 
 
     <footer>
         <div id="footer-wrap">
+            <div id="back-top">Back to Top</div>
+            <script>
+                  $("#back-top").click(function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+       </script>
+
             <div id="footer-up">
                 <div id="footer1">
+                    <div id="footer1-wrap">
                     <ul>
-                        <li>Books</li>
-                        <li>Index</li>
-                        <li>News</li>
-                        <li>Podcast</li>
-                        <li>Surpport</li>
-                        <li>Search</li>
+                        <li>Get to Know Us</li>
+                        <li>Careers</li>
+                        <li>About Amazon</li>
+                        <li>Investor Relations</li>
+                        <li>Amazon Devices</li>
+                        <li>Amazon Science</li>
+                    </ul>
+
+                    <ul>
+                        <li>Make Money with Us</li>
+                        <li>Sell products on Amazon</li>
+                        <li>Sell on Amazon Business</li>
+                        <li>Sell apps on Amazon</li>
+                        <li>Advertise Your Products</li>
+                        <li>Self-Publish with Us</li>
+                        <li>Host an Amazon Hub</li>
+                    </ul>
+
+                    <ul>
+                        <li>Amazon Payment Products</li>
+                        <li>Amazon Business Card</li>
+                        <li>Shop with Points</li>
+                        <li>Reload Your Balance</li>
+                        <li>Amazon Currency Converter</li>
+                    </ul>
+
+                    <ul>
+                        <li>Let Us Help You</li>
+                        <li>Your Account</li>
+                        <li>Your Orders</li>
+                        <li>Investor Relations</li>
+                        <li>Shipping Rates & Policies</li>
+                        <li>Returns & Replacements</li>
+                        <li>Amazon Assistant</li>
+                        <li>Help</li>
                     </ul>
                 </div>
-
-
-
-                <div id="footer2">
+                </div>
+                <!-- <div id="footer2">
                     <ul>
                         <li><i class="fa-brands fa-twitter"></i></li>
                         <li><i class="fa-brands fa-youtube"></i></li>
                         <li><i class="fa-brands fa-instagram"></i></li>
                     </ul>
-                </div>
+                </div> -->
             </div>
+
+            <div id="footer2">
+                    <div><img src="img/NicePng_amazon-logo-png_167642.png" id="amazon-logo"></div>
+
+
+                    <div>
+                        <select>
+                        <option value="usa"> English</option>
+                        <option value="south korea">한국어</option>
+                        <option value="japan">Japanese</option>
+                        <option value="canada">Spanish</option>
+                    </select>
+                </div>
+
+                    <div>
+                        <select>
+                        <option value="usa"> $ USD - U.S.Dollar </option>
+                        <option value="south korea">₩ KRW - K.R.Won</option>
+                        <option value="japan">¥ JPY - J.P.Yen</option>
+                        <option value="canada"> $ CAD - Canadian Dollar</option>
+                    </select>
+                </div>
+
+                    <div>
+                        <select>
+                        <option value="usa"> <img src="img/4x3/us.svg" alt="usa">United States</option>
+                        <option value="south korea">Republic of Korea</option>
+                        <option value="japan">Japan</option>
+                        <option value="canada">Canada</option>
+                    </select>
+                </div>
+                <!-- <script>$("select").msDropDown();</script> -->
+           
+            </div>
+
+
             <div id="footer-bottom">
-                <div id="footer3">© ПОЛКА 2018. ВСЕ ПРАВА ЗАЩИЩЕНЫ | ЛИЦЕНЗИЯ</div>
-                <div id="footer4">SITE BY MINKYUNG KIM</div>
+                <div>Conditions of Use | Privacy Notice | Your Ads Privacy Choices</div>
+                <div>© 1996-2023, Amazon.com, Inc. or its affiliates</div>
             </div>
         </div>
 

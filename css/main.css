@@ -72,7 +72,7 @@ a:visited {
   left: 300px;
   bottom: 0;
   width: 70%;
-  height: 70px;
+  height: 60px;
   background-color: rgb(40, 65, 110);
   color: white;
   z-index: 200;
@@ -86,13 +86,12 @@ a:visited {
   bottom: 0;
   width: 70%;
   height: 300px;
-  background-color: rgb(22, 61, 97);
+  background-color: rgb(40, 65, 110);
   color: white;
-  z-index: 202;
+  z-index: 190;
   text-align: center;
   margin: 0 auto;
   border-radius: 20px 20px 0 0;
-  opacity: 0.8;
   padding: 26px 0;
   display: none;
 }
@@ -100,6 +99,7 @@ a:visited {
   font-size: 20px;
   color: white;
   text-align: center;
+  font-weight: bolder;
 }
 #popup #popup-open #popup1 {
   width: 90%;
@@ -147,7 +147,7 @@ a:visited {
 #popup #popup-open #popup2 button {
   width: 150px;
   height: 40px;
-  background-color: #ffd000;
+  background-color: rgb(255, 187, 0);
   font-weight: bolder;
   text-align: center;
   border-radius: 10px;
@@ -159,6 +159,10 @@ a:visited {
   cursor: pointer;
   box-shadow: rgba(14, 30, 37, 0.747) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
+#popup #popup-open #popup2 a {
+  color: black;
+  font-weight: bolder;
+}
 #popup #popup-wrap {
   width: 90%;
   height: 60px;
@@ -166,6 +170,11 @@ a:visited {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  z-index: 204;
+}
+#popup #popup-wrap a {
+  color: black;
+  font-weight: bolder;
 }
 #popup #popup-wrap img {
   width: 140px;
@@ -182,11 +191,11 @@ a:visited {
 #popup #popup-wrap button {
   width: 150px;
   height: 40px;
-  background-color: #ffd000;
+  background-color: rgb(255, 187, 0);
   font-weight: bolder;
   text-align: center;
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 1px;
   border: 1px solid transparent;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
@@ -319,7 +328,7 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
 #book-animation .book-wrap .side .side-fill {
   width: 40px;
   height: 500px;
-  background-image: linear-gradient(to right, #e7b400, #ecb900, #f0bf00, #f5c400, #f9ca00, #f9ca00, #f9ca00, #f9ca00, #f5c400, #f0bf00, #ecb900, #e7b400);
+  background-image: linear-gradient(to right, #d18700, #d98d00, #e29200, #ea9800, #f39e00, #f39e00, #f39e00, #f39e00, #ea9800, #e29200, #d98d00, #d18700);
   transition: all 1s;
   display: flex;
   justify-content: space-between;
@@ -341,7 +350,7 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
 #book-animation .book-wrap .main .main-fill {
   width: 300px;
   height: 500px;
-  background-image: linear-gradient(to right, #1400e7, #006fff, #009dff, #00c0d8, #00deb3, #65dc7f, #a1d447, #dbc500, #ff9001, #ff434f, #ff0098, #d200e7);
+  background-image: linear-gradient(to left bottom, #d18700, #d98d00, #e29200, #ea9800, #f39e00, #f39e00, #f39e00, #f39e00, #ea9800, #e29200, #d98d00, #d18700);
   text-align: center;
   transition: 1.2s;
   transform-origin: left;
@@ -363,7 +372,7 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
 #book-animation .book-wrap .main #title2 {
   font-size: 17px;
   margin: 90px 20px 0 20px;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bolder;
 }
 #book-animation .book-wrap .main #writer2 {
@@ -446,7 +455,7 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
   border-right: 1px solid transparent;
 }
 #best-seller .line1 .b1 {
-  width: 277px;
+  width: 282px;
   height: 350px;
   margin: 40px 0 0 0;
   position: relative;
@@ -456,6 +465,9 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
   align-items: center;
   flex-direction: column;
   border-right: 1px solid rgba(177, 176, 176, 0.801);
+}
+#best-seller .line1 .b1 img {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 #best-seller .line1 .b1 #best-title {
   color: black;
@@ -490,7 +502,7 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
   font-weight: bolder;
   position: absolute;
   top: 0;
-  left: -10px;
+  left: 0;
   z-index: 100;
 }
 #best-seller .line1 #line1-bt {
@@ -508,7 +520,7 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
 
 #buy {
   width: 100%;
-  height: 500px;
+  height: 400px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -516,16 +528,16 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
 }
 #buy #buy-wrap {
   width: 100%;
-  height: 500px;
+  height: 400px;
   background-size: cover;
   background-position: contain;
   margin: 0 auto;
-  background-color: rgb(25, 37, 59);
+  background-color: rgb(19, 29, 46);
   border-bottom: 20px solid rgb(255, 174, 0);
 }
 #buy #buy-tit {
   width: 80%;
-  height: 450px;
+  height: 400px;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -534,14 +546,14 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
   align-items: center;
   position: absolute;
   z-index: 10;
-  top: -25px;
+  top: -49px;
   left: 50%;
   transform: translate(-50%, 10%);
   color: white;
 }
 #buy #buy-tit .buy-titfont {
-  font-size: 20px;
-  margin: 5px 0;
+  font-size: 30px;
+  margin: 0 0 20px 0;
   font-weight: bolder;
 }
 #buy #buy-tit .byu-titfont2 {
@@ -553,7 +565,7 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
 }
 #buy #buy-tit #buy-box {
   width: 100%;
-  height: 260px;
+  height: 150px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -580,10 +592,139 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
   font-weight: bolder;
 }
 
-#chronicle {
+#chart {
   width: 100%;
-  height: 1200px;
-  background-color: lightgreen;
+  height: 1500px;
+  background-color: rgba(143, 248, 143, 0.699);
+  margin-top: 5px;
+}
+#chart #chart-wrap {
+  width: 100%;
+  background-color: white;
+  margin: 0 auto;
+}
+#chart #chart-wrap #chart-title {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 70px;
+}
+#chart #chart-wrap #chart-title p:nth-child(1) {
+  font-size: 17px;
+  font-weight: bolder;
+}
+#chart #chart-wrap #chart-title p:nth-child(1) span {
+  text-decoration: underline;
+}
+#chart #chart-wrap #chart-title p:nth-child(2) {
+  font-size: 100px;
+  font-weight: bolder;
+}
+#chart #chart-wrap #chart-title p:nth-child(3) {
+  font-size: 15px;
+}
+#chart #chart-wrap #chart-menu {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  font-size: 25px;
+  font-weight: bolder;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+#chart #chart-wrap #chart-menu p {
+  width: 300px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#chart #chart-wrap #chart-menu p:hover {
+  border-bottom: 4px solid black;
+  cursor: pointer;
+}
+#chart #chart-wrap #chart-submenu {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+#chart #chart-wrap #chart-submenu p {
+  width: 120px;
+  height: 25px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#chart #chart-wrap #chart-submenu p:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+#chart #chart-wrap .chart1 {
+  width: 85%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+#chart #chart-wrap .chart1 .chart-box {
+  width: 25%;
+  height: 550px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  margin-right: 50px;
+  margin-top: 50px;
+}
+#chart #chart-wrap .chart1 .chart-box .chart-book {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#chart #chart-wrap #chart-img {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#chart #chart-wrap #chart-img p {
+  font-style: italic;
+}
+#chart #chart-wrap #chart-img img {
+  width: 200px;
+  height: 90px;
+  margin-top: 50px;
+}
+#chart #chart-wrap #chart-img #underline {
+  text-decoration: underline;
+}
+#chart #chart-wrap #chart-img #blue {
+  color: deepskyblue;
+  text-decoration: underline;
+}
+
+.fic-effect {
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
 
 #talk {
@@ -599,64 +740,122 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
 }
 
 footer {
-  background-color: gold;
   width: 100%;
   height: 200px;
   margin: 0 auto;
+  margin: 0 auto;
 }
 footer #footer-wrap {
-  background-color: tomato;
-  width: 85%;
+  width: 100%;
   height: 100%;
   margin: 0 auto;
 }
+footer #footer-wrap #back-top {
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  background-color: rgb(63, 67, 77);
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer #footer-wrap #back-top:hover {
+  cursor: pointer;
+  background-color: rgb(82, 87, 100);
+}
 footer #footer-wrap #footer-up {
   width: 100%;
-  background-color: gold;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-footer #footer-wrap #footer-up #footer1 ul {
+footer #footer-wrap #footer-up #footer1 {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(35, 40, 49);
+  margin: 0 auto;
+}
+footer #footer-wrap #footer-up #footer1 #footer1-wrap {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: top;
+  margin-top: 50px;
 }
-footer #footer-wrap #footer-up #footer1 ul li {
+footer #footer-wrap #footer-up #footer1 #footer1-wrap ul {
   margin: 0 20px;
-  font-size: 30px;
 }
-footer #footer-wrap #footer-up #footer2 ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-footer #footer-wrap #footer-up #footer2 ul li {
-  margin: 0 20px;
-  font-size: 30px;
-}
-footer #footer-wrap #footer-up #footer2 ul li i:hover {
+footer #footer-wrap #footer-up #footer1 #footer1-wrap li {
+  margin: 10px 20px;
+  font-size: 16px;
   color: white;
 }
-footer #footer-wrap #footer-bottom {
+footer #footer-wrap #footer-up #footer1 #footer1-wrap li:nth-child(1) {
+  font-size: 18px;
+  font-weight: bolder;
+}
+footer #footer-wrap #footer-up #footer1 #footer1-wrap li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+footer #footer-wrap #footer-up #footer1 #footer1-wrap li:nth-child(1):hover {
+  cursor: none;
+  text-decoration: none;
+}
+footer #footer-wrap #footer2 {
   width: 100%;
-  height: 100px;
-  background-color: gold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-footer #footer-wrap #footer-bottom #footer3 {
+  height: 60px;
+  background-color: rgb(35, 40, 49);
+  border-top: 1px solid rgba(211, 211, 211, 0.562);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 20px;
-  font-size: 15px;
 }
-footer #footer-wrap #footer-bottom #footer4 {
+footer #footer-wrap #footer2 div {
+  width: 150px;
+  height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 20px;
-  font-size: 15px;
+  text-align: center;
+  margin: 0 10px;
+}
+footer #footer-wrap #footer2 div select {
+  width: 145px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(185, 184, 184, 0);
+}
+footer #footer-wrap #footer2 div select option {
+  width: 200px;
+  height: 20px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
+  color: black;
+}
+footer #footer-wrap #footer2 div select option img {
+  width: auto;
+}
+footer #footer-wrap #footer2 div #amazon-logo {
+  width: 100px;
+  height: 30px;
+  padding-top: 5px;
+}
+footer #footer-wrap #footer2 div #korea-logo {
+  width: 20px;
+  height: 10px;
+}
+footer #footer-bottom {
+  width: 100%;
+  height: 130px;
+  background-color: rgb(21, 24, 31);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 11px;
+  padding-top: 20px;
 }
