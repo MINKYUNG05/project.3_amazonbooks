@@ -608,7 +608,7 @@ section {
         }
 
         .b1 {
-            width: 282px;
+            width: 290px;
             height: 350px;
             // background-color: rgba(119, 136, 153, 0.63);
             margin: 40px 0 0 0;
@@ -790,7 +790,7 @@ section {
 //chart
 #chart {
     width: 100%;
-    height: 1250px;
+    height: 1145px;
     background-color: rgba(143, 248, 143, 0.699);
     margin-top: 5px;
 
@@ -839,7 +839,7 @@ section {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 40px;
+            // margin-top: 40px;
             font-size: 25px;
             font-weight: bolder;
             box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
@@ -890,7 +890,7 @@ section {
 
         .chart1 {
             width: 85%;
-            height: auto;
+            height: 530px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -944,7 +944,7 @@ section {
                         padding-right: 30px;
                         position: absolute;
                         top: 7px;
-                        left: -7px;
+                        left: -6px;
                         color: white;
                     }
 
@@ -1354,6 +1354,9 @@ section {
                         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
                     }
 
+                    img:hover{
+                        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+                    }
 
 
                     h4 {
@@ -1376,6 +1379,12 @@ section {
                     img {
                         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
                     }
+
+                    img:hover{
+                        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+                    }
+
+
 
                     h4 {
                         font-size: 12px;
@@ -1452,6 +1461,11 @@ section {
                     width: 410px;
                     height: 288px;
                     margin: 10px;
+                }
+
+                img:hover {
+                    cursor:pointer;
+                    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
                 }
             }
         }

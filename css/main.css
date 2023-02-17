@@ -455,7 +455,7 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
   border-right: 1px solid transparent;
 }
 #best-seller .line1 .b1 {
-  width: 282px;
+  width: 290px;
   height: 350px;
   margin: 40px 0 0 0;
   position: relative;
@@ -594,7 +594,7 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
 
 #chart {
   width: 100%;
-  height: 1250px;
+  height: 1145px;
   background-color: rgba(143, 248, 143, 0.699);
   margin-top: 5px;
 }
@@ -634,7 +634,6 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
   font-size: 25px;
   font-weight: bolder;
   box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
@@ -674,7 +673,7 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
 }
 #chart #chart-wrap .chart1 {
   width: 85%;
-  height: auto;
+  height: 530px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -719,7 +718,7 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
   padding-right: 30px;
   position: absolute;
   top: 7px;
-  left: -7px;
+  left: -6px;
   color: white;
 }
 #chart #chart-wrap .chart1 .chart-box .rank1 {
@@ -1032,6 +1031,9 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
 #club #club-wrap #club-top #club-box .club-bookimg img {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
+#club #club-wrap #club-top #club-box .club-bookimg img:hover {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
 #club #club-wrap #club-top #club-box .club-bookimg h4 {
   font-size: 12px;
   margin: 10px 0;
@@ -1048,6 +1050,9 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
 }
 #club #club-wrap #club-top #club-box .club-bookimg1 img {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+#club #club-wrap #club-top #club-box .club-bookimg1 img:hover {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 #club #club-wrap #club-top #club-box .club-bookimg1 h4 {
   font-size: 12px;
@@ -1112,6 +1117,10 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
   width: 410px;
   height: 288px;
   margin: 10px;
+}
+#last #last-wrap #last-bottom #review-box img:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 footer {
