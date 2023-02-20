@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0; padding: 0;}
+        ol,ul,li{text-decoration: none; list-style-type: none;}
+        #box1{width:100%; height: 50px; border: 2px solid red;
+        border-radius: 20px; text-align: center; line-height: 50px; margin: 10px 0;}
+
+        #box2{width:100%; height: auto; border: 2px solid blue;
+        border-radius: 20px; text-align: center; line-height: 50px;}
+
+        #box2-wrap{width:90%; height: auto; border-radius: 20px; text-align: center;  margin: 0 auto;}
+
+        #product{width: 70%; display:flex; justify-content: space-between; align-items: center; margin: 0 auto;}
+
+        .bookimg img{width: 200px; height: 300px;}
+
+        #bookinfo{display:flex; flex-direction: column;}
+        #bookk{display:flex;  justify-content: center; align-items: center; }
+        #bookk ul h4{margin: -20px 0;}
+
+       
+
+        #bookex{background-color: rgb(200, 236, 248);}
+        #bookex2{background-color: rgb(102, 125, 133);}
+
+        #box3{font-size: 11px; color: gray; margin: 20px 0; text-align: center;}
+    </style>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+   <div id="box1"> 도서 API 연습 홈페이지</div>
+   <div id="box2">
+    <div id="box2-wrap">
+        <div id="product">
+            <div class="bookimg"></div>
+            <div id="bookinfo">
+                <div id="bookk">
+                <ul>
+                    <li>타이틀</li>
+                    <li>판매가</li>
+                    <li>출판사</li>
+                    <li>저자</li>
+                    <li>배송비</li>
+                    <li>수량</li>
+                </ul>
+
+                <ul>
+                    <li class="title"></li>
+                    <li>14,000 원</li>
+                    <li>피오피스토리</li>
+                    <li class="infor"></li>
+                    <li>무료배송</li>
+                    <li>
+                        <select>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </li>
+                </ul>
+                </div>
+                
+            <div id="bt">
+                <button>바로구매</button>
+                <button>장바구니</button>
+                <button>찜하기</button>
+                <button>조르기</button>
+            </div>
+            </div>
+
+        </div>
+
+        <div id="bookex">
+            작가요약
+        </div>
+
+        <div id="bookex2">
+            책설명
+        </div>
+    </div>
+
+   </div>
+
+   <script>
+    $.ajax({
+        method: "GET",
+        url: "https://dapi.kakao.com/v3/search/book?target=title",
+        data: { query: "미움받을", size: 50 },
+        headers: { Authorization: "KakaoAK 4b0905b291a261ae8f16e3c80a8272e2" }
+    })
+        .done(function (msg) {
+
+
+            // for문 (8개)
+            var boxs = document.getElementsByClassName('bookimg');
+
+
+            for (var i = 0; i < boxs.length; i++) {
+
+                $(".bookimg").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                $(".title").eq(i).append("<p>" + msg.documents[i].title + "</p>");
+
+
+                $(".infor").eq(i).append("<p>" + msg.documents[i].authors + "</p>");
+
+            }
+
+        });
+
+        $(function () {
+        $.get("./txt/practice2.txt", function (data) {
+          $("#bookex").html(data);
+        })
+
+      });
+
+</script>
+
+   <div id="box3">
+    Copyright ⓒ INTERPARK Corporation All rights reserved.
+   </div>
+</body>
+</html>

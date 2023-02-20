@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul,
+li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#promotion-code {
+    width: 100%;
+    height: 30px;
+    background-color: rgb(255, 174, 0);
+    color: white;
+    font-weight: bolder;
+    line-height: 30px;
+    font-size: 12px;
+
+}
+
+#header-top {
+    width: 80%;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: lightgoldenrodyellow;
+
+    img {
+        width: 240px;
+        height: 48px;
+        margin-top: 20px;
+    }
+
+    #search {
+        width: 30%;
+        height: 40px;
+        border-bottom: 1px solid navy;
+
+        i {
+            font-size: 20px;
+        }
+
+        input {
+            width: 90%;
+            height: 35px;
+            border: 1px solid transparent;
+        }
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        li {
+            margin: 0 10px;
+            text-align: center;
+
+            i {
+                font-size: 30px;
+                padding: 10px 0;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+#header-bottom {
+    width: 80%;
+    height: 50px;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            font-size: 13px;
+            margin: 0 10px;
+            font-weight: bolder;
+
+        }
+
+        li:hover {
+            color: rgb(255, 174, 0);
+            cursor: pointer;
+        }
+    }
+}
+
+#cookie {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(32, 46, 73);
+    color: white;
+    z-index: 200;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: 12px;
+        margin: 0 30px;
+
+        a{text-decoration: none;
+        color:rgb(182, 229, 248);
+        font-weight: bolder;
+        }
+    }
+
+    button {
+        width: 300px;
+        height: 30px;
+        font-size: 12px;
+        font-weight: bolder;
+        background-color: rgb(255, 174, 0);
+        border: 1px solid transparent;
+    }
+
+    button:hover{background-color: rgb(224, 153, 0); cursor:pointer;}
+}
+
+
+#chatbot{position: fixed;
+    right: 0;
+    top: 500px;
+    width: 3%;
+    height: 150px;
+    // background-color: rgb(32, 46, 73);
+    background-image: linear-gradient(to left top, #17233d, #223153, #2d406a, #395082, #46609b);
+    color: white;
+    z-index: 200;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 0 0 20px ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+    p{font-size:11px;
+        writing-mode: vertical-lr;}
+}
+
+#chatbot:hover{cursor:pointer;}
+
+#chatbot-live{
+
+    position: fixed;
+    right: 100px;
+    top: 400px;
+    width: 20%;
+    height: 500px;
+    background-color: white;
+    color: white;
+    z-index: 200;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    #chat-top{width:100%; height: 50px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        // background-color: rgb(63, 91, 148);
+        background-image: linear-gradient(to top, #17233d, #223153, #2d406a, #395082, #46609b);
+        border-radius: 20px 20px 0 0;
+
+    img{width: 30px; height: 25px; margin: 0 10px;}
+    #icon{ cursor:pointer;
+        i{margin-right: 10px;}
+    }
+    }
+
+    #chat-text{ display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       
+
+        #chat-bt{ display: flex; justify-content: center; align-items: center;
+            flex-wrap: wrap; 
+        button{border-radius: 20px; border: 2px solid rgba(25, 25, 51, 0.664);
+            color:rgb(25, 25, 51); font-weight: bolder; text-align: center; width: 150px; height: 30px; background-color: transparent; margin:5px; font-size: 11px;}
+
+        }
+
+
+        p{width: 100%; font-size: 11px; color:gray;  margin-top:50px;}
+        .loader{border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 8px solid #0d284d;
+            width: 30px;
+            height: 30px;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+            margin: 30px 0 100px 0;
+          
+
+        }
+
+        @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+          }
+          
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+
+
+    }
+    #chat-bottom{width:100%; height: 120px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        // background-image: linear-gradient(to top, #17233d, #223153, #2d406a, #395082, #46609b);
+        // background-color: rgb(63, 91, 148);
+        // background-color: antiquewhite;
+        border-radius: 0 0 20px 20px;
+        // box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+       font-size: 11px; color:gray; 
+    //    border-top: 4px solid rgb(255, 174, 0);
+    }
+
+}
+
+#contnet{width: 100%; height: 700px; background-color: lightblue;}
+#infor{width: 100%; height: 900px; background-color: lightcoral;}
+#review{width: 100%; height: 300px; background-color: lightgoldenrodyellow;}
+#more{width: 100%; height: 900px; background-color: lightgreen;}
+#ad{width: 100%; height: 600px; background-color: lightpink;}
+#footer{width: 100%; height: 500px; background-color: lightblue;}
+

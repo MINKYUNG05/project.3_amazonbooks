@@ -78,9 +78,9 @@ a:visited {
 }
 
 #logo img {
-    width: 400px;
-    height: 77px;
-    margin-top: 30px;
+    width: 250px;
+    height: 47px;
+    margin-top: 50px;
 }
 
 
@@ -456,7 +456,10 @@ section {
                 // background-image: linear-gradient(to right top, #1b2041, #1f284e, #232f5b, #263868, #294076, #294076, #294075, #294075, #263766, #232f58, #1f274a, #1a1f3d);
 
                 //노랑계열
-                background-image: linear-gradient(to left bottom, #d18700, #d98d00, #e29200, #ea9800, #f39e00, #f39e00, #f39e00, #f39e00, #ea9800, #e29200, #d98d00, #d18700);
+                // background-image: linear-gradient(to left bottom, #d18700, #d98d00, #e29200, #ea9800, #f39e00, #f39e00, #f39e00, #f39e00, #ea9800, #e29200, #d98d00, #d18700);
+
+
+                background-image: linear-gradient(to right, #ffa600, #e99800, #d48a01, #bf7c01, #aa6e01);
 
                 // background-image:url(../img/cover1.PNG);
                 // background-repeat: no-repeat;
@@ -489,7 +492,7 @@ section {
             }
 
             #title2 {
-                font-size: 17px;
+                font-size: 14px;
                 margin: 90px 20px 0 20px;
                 color: rgb(255, 255, 255);
                 font-weight: bolder;

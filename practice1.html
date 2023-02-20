@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <style>
+   
+        .book {
+            width: 70%;
+            height: 500px;
+            background-color: antiquewhite;
+            display: flex;
+            margin: 0 auto;
+            
+        }
+
+        
+        .book-wrap {
+            width: 70px;
+            height: 500px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: hidden;
+
+
+        }
+
+        .side {
+            width: 30px;
+            height: 500px;
+    
+            text-align: center;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+           
+        }
+
+        .side-fill {
+            width: 30px;
+            height: 400px;
+            border: 1px solid transparent;
+            background-color: gold;
+            -webkit-transition: 1s;
+            transition: all 1s;
+        }
+
+
+        .side-fill:hover {
+            cursor: pointer;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+
+        .side-fill2 {
+            transform-origin: right;
+            -webkit-transform: rotateY(45deg);
+            transform: perspective(2000px) rotateY(95deg);
+            margin-right:40px;
+
+
+        }
+
+        .main {
+            width: 0px;
+            height: 450px;
+            text-align: center;
+            margin-top: 50px;
+            /* display:none; */
+
+        }
+
+        .main-fill {
+            width: 200px;
+            height: 400px;
+            background-color: lightcoral;
+            border: 1px solid transparent;
+            text-align: center;
+            -webkit-transition: 1.2s;
+            transition: 1.2s;
+            transform-origin: left;
+            -webkit-transform: rotateY(45deg);
+            transform: perspective(2000px) rotateY(90deg);
+            /* display: none; */
+
+        }
+
+
+        .main-fill:hover {
+            cursor: pointer;
+     
+        }
+
+        .main-fill2 {
+            transform-origin: left;
+            -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+            margin-right: 24px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+        <!-- book1 -->
+        <div class="book">
+
+            <div class="book-wrap">
+                <div class="side">
+                    <div class="side-fill">side</div>
+                </div>
+
+                <div class="main">
+                    <div class="main-fill">main</div>
+                </div>
+            </div>
+
+            <div class="book-wrap">
+                <div class="side">
+                    <div class="side-fill">side</div>
+                </div>
+
+                <div class="main">
+                    <div class="main-fill">main</div>
+                </div>
+            </div>
+
+            <div class="book-wrap">
+                <div class="side">
+                    <div class="side-fill">side</div>
+                </div>
+
+                <div class="main">
+                    <div class="main-fill">main</div>
+                </div>
+
+            </div>
+            <div class="book-wrap">
+                <div class="side">
+                    <div class="side-fill">side</div>
+                </div>
+
+                <div class="main">
+                    <div class="main-fill">main</div>
+                </div>
+            </div>
+
+            <div class="book-wrap">
+                <div class="side">
+                    <div class="side-fill">side</div>
+                </div>
+
+                <div class="main">
+                    <div class="main-fill">main</div>
+                </div>
+            </div>
+
+    </div>
+    <script>
+
+        $(document).ready(function () {
+            $(".book-wrap").click(function () {
+           
+               
+                $(this).children('.side').find('.side-fill').addClass('side-fill2');
+                $(this).siblings().children('.side').find('.side-fill').delay(4000).removeClass('side-fill2');//사이드 닫히는 구간1
+                $(this).animate({width: "280px"}); //메인화면이 열리는 구간
+                $(this).children(".main").find(".main-fill").addClass('main-fill2');//메인애니메이션 작동
+                $(this).siblings().children('.main').find('.main-fill').delay(4000).removeClass('main-fill2');//메인 닫히는 구간1
+                
+                $(this).siblings().animate({width: "50px"},1000);
+                // $(this).delay(1000).animate({width: "100px"});
+               
+            });
+        });
+
+
+      
+
+    </script>
+</body>
+
+</html>
