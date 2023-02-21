@@ -24,47 +24,105 @@ a:visited {
   color: darkgray;
 }
 
-#nav-wrap {
+#promotion-code {
   width: 100%;
-  height: 450px;
-  border-top: 30px solid rgb(25, 37, 59);
+  height: 30px;
+  background-color: rgb(255, 174, 0);
+  color: white;
+  font-weight: bolder;
+  line-height: 30px;
+  font-size: 12px;
 }
-#nav-wrap #nav {
-  width: 85%;
-  height: 100px;
-  margin: 0 auto;
-}
-#nav-wrap #nav ul {
-  width: 100%;
-  height: 100%;
+
+#header-top {
+  width: 80%;
+  height: 110px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   margin: 0 auto;
 }
-#nav-wrap #nav ul li {
-  width: 100%;
-  height: 100%;
-  margin: 0 30px;
+#header-top img {
+  width: 240px;
+  height: 48px;
+  margin-top: 10px;
+}
+#header-top #search {
+  width: 30%;
+  height: 40px;
+  border-bottom: 1px solid navy;
+}
+#header-top #search i {
+  font-size: 20px;
+}
+#header-top #search input {
+  width: 90%;
+  height: 35px;
+  border: 1px solid transparent;
+}
+#header-top select {
+  width: 170px;
+  height: 30px;
+  border: 1px solid white;
   font-size: 15px;
-  font-weight: bold;
-  line-height: 130px;
+  color: gray;
   text-align: center;
 }
-#nav-wrap #nav ul li a:link {
-  color: black;
+#header-top select option {
+  border: 1px solid transparent;
 }
-#nav-wrap #nav ul li a:visited {
-  color: black;
+#header-top ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#nav-wrap #nav ul li a:hover {
-  color: darkorange;
+#header-top ul li {
+  margin: 0 10px;
+  text-align: center;
+}
+#header-top ul li i {
+  font-size: 30px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+#header-top ul li p {
+  font-size: 12px;
+  font-weight: bolder;
 }
 
-#logo img {
-  width: 250px;
-  height: 47px;
-  margin-top: 50px;
+#header-bottom {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(36, 37, 66);
+}
+#header-bottom #header-wrap {
+  width: 80%;
+  height: 50px;
+  background-color: rgb(36, 37, 66);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+#header-bottom #header-wrap ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#header-bottom #header-wrap ul li {
+  font-size: 13px;
+  margin: 0 10px;
+  font-weight: bolder;
+  color: white;
+}
+#header-bottom #header-wrap ul li:hover {
+  color: rgb(255, 174, 0);
+  cursor: pointer;
+}
+
+#blank {
+  width: 100%;
+  height: 300px;
 }
 
 #popup {
@@ -350,7 +408,7 @@ section .swiper .swiper-pagination .swiper-pagination-bullet-active {
 #book-animation .book-wrap .main .main-fill {
   width: 300px;
   height: 500px;
-  background-image: linear-gradient(to right, #ffa600, #e99800, #d48a01, #bf7c01, #aa6e01);
+  background-image: linear-gradient(to left top, #fdcf4e, #fdcc44, #fdc83a, #fec52e, #fec120, #fcbe18, #faba0e, #f8b700, #f3b300, #edaf00, #e8ac00, #e3a800);
   text-align: center;
   transition: 1.2s;
   transform-origin: left;
@@ -1175,6 +1233,11 @@ footer #footer-wrap #footer-up #footer1 #footer1-wrap li {
   margin: 10px 20px;
   font-size: 16px;
   color: white;
+}
+footer #footer-wrap #footer-up #footer1 #footer1-wrap li img {
+  width: 150px;
+  height: 100px;
+  margin-left: -10px;
 }
 footer #footer-wrap #footer-up #footer1 #footer1-wrap li:nth-child(1) {
   font-size: 18px;

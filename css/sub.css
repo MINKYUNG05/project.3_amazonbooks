@@ -22,18 +22,16 @@ li {
 
 #header-top {
   width: 80%;
-  height: 70px;
+  height: 110px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin: 0 auto;
-  margin-top: 20px;
-  background-color: lightgoldenrodyellow;
 }
 #header-top img {
   width: 240px;
   height: 48px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 #header-top #search {
   width: 30%;
@@ -48,6 +46,17 @@ li {
   height: 35px;
   border: 1px solid transparent;
 }
+#header-top select {
+  width: 170px;
+  height: 30px;
+  border: 1px solid white;
+  font-size: 15px;
+  color: gray;
+  text-align: center;
+}
+#header-top select option {
+  border: 1px solid transparent;
+}
 #header-top ul {
   display: flex;
   justify-content: center;
@@ -60,31 +69,39 @@ li {
 #header-top ul li i {
   font-size: 30px;
   padding: 10px 0;
+  cursor: pointer;
 }
 #header-top ul li p {
   font-size: 12px;
+  font-weight: bolder;
 }
 
 #header-bottom {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(36, 37, 66);
+}
+#header-bottom #header-wrap {
   width: 80%;
   height: 50px;
-  background-color: lightgreen;
+  background-color: rgb(36, 37, 66);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
 }
-#header-bottom ul {
+#header-bottom #header-wrap ul {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#header-bottom ul li {
+#header-bottom #header-wrap ul li {
   font-size: 13px;
   margin: 0 10px;
   font-weight: bolder;
+  color: white;
 }
-#header-bottom ul li:hover {
+#header-bottom #header-wrap ul li:hover {
   color: rgb(255, 174, 0);
   cursor: pointer;
 }
@@ -155,9 +172,9 @@ li {
 #chatbot-live {
   position: fixed;
   right: 100px;
-  top: 400px;
-  width: 20%;
-  height: 500px;
+  top: 320px;
+  width: 18%;
+  height: 523px;
   background-color: white;
   color: white;
   z-index: 200;
@@ -167,7 +184,7 @@ li {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 #chatbot-live #chat-top {
@@ -225,7 +242,8 @@ li {
   border-radius: 50%;
   border-top: 8px solid #0d284d;
   width: 30px;
-  height: 30px; /* Safari */
+  height: 30px;
+  /* Safari */
   animation: spin 2s linear infinite;
   margin: 30px 0 100px 0;
 }
@@ -248,7 +266,7 @@ li {
   color: gray;
 }
 
-#contnet {
+#content {
   width: 100%;
   height: 700px;
   background-color: lightblue;
@@ -262,24 +280,335 @@ li {
 
 #review {
   width: 100%;
-  height: 300px;
-  background-color: lightgoldenrodyellow;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.801);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#review p:nth-child(1) {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bolder;
+  color: rgb(180, 180, 180);
+}
+#review p:nth-child(2) {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bolder;
+  color: rgb(177, 177, 177);
+  margin: 10px 0;
+}
+#review button {
+  width: 200px;
+  height: 45px;
+  border: 1px solid transparent;
+  background-color: #627396;
+  border-radius: 50px;
+  color: rgb(31, 31, 75);
+  cursor: pointer;
+  font-weight: bolder;
+  margin-top: 30px;
+  color: white;
+}
+#review button:hover {
+  width: 200px;
+  height: 45px;
+  border: 1px solid transparent;
+  background-image: linear-gradient(to bottom, #063b8b, #0d2e74, #0d225d, #091648, #080834);
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+  margin-top: 30px;
 }
 
 #more {
   width: 100%;
-  height: 900px;
-  background-color: lightgreen;
+  height: 1100px;
+  background-color: rgb(219, 219, 219);
+  padding: 50px 0;
+}
+#more #more1 {
+  width: 85%;
+  height: 450px;
+  background-color: white;
+  margin: 0 auto;
+}
+#more #more1 #more-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#more #more1 #more-top p:nth-child(1) {
+  font-size: 25px;
+  font-weight: bolder;
+}
+#more #more1 #more-top P:nth-child(2) i {
+  font-size: 25px;
+  margin: 0 20px;
+}
+#more #more1 #more-bottom {
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+  overflow-x: scroll;
+  position: relative;
+}
+#more #more1 #more-bottom #more-bottom-wrap {
+  width: 200%;
+  height: 380px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+}
+#more #more1 #more-bottom #more-bottom-wrap .note {
+  width: 180px;
+  height: 350px;
+  background-color: gold;
+  text-align: center;
+}
+#more #more1 #more-bottom #more-bottom-wrap .note h4 {
+  font-size: 13px;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+#more #more2 {
+  width: 85%;
+  height: 450px;
+  background-color: white;
+  margin: 0 auto;
+}
+#more #more2 #more2-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#more #more2 #more2-top p:nth-child(1) {
+  font-size: 25px;
+  font-weight: bolder;
+}
+#more #more2 #more2-top P:nth-child(2) i {
+  font-size: 25px;
+  margin: 0 20px;
+}
+#more #more2 #more2-bottom {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#more #more2 #more2-bottom .box {
+  width: 150px;
+  height: 350px;
+  background-color: tomato;
 }
 
 #ad {
   width: 100%;
-  height: 600px;
+  height: 400px;
   background-color: lightpink;
+  display: flex;
+}
+#ad #ad-right {
+  background-image: url(../img/banner-amazon-1786x642-2021.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#ad #ad-right p:nth-child(1) {
+  font-size: 30px;
+  font-weight: bolder;
+}
+#ad #ad-right p:nth-child(2) {
+  font-size: 17px;
+  color: gray;
+  margin: 20px 0;
+}
+#ad #ad-right button {
+  width: 170px;
+  height: 50px;
+  border: 2px solid rgb(31, 31, 75);
+  background-color: transparent;
+  border-radius: 50px;
+  color: rgb(31, 31, 75);
+  cursor: pointer;
+  font-weight: bolder;
+}
+#ad #ad-right button:hover {
+  border: 2px solid transparent;
+  background-color: rgb(31, 31, 75);
+  border-radius: 20px;
+  color: white;
+  font-weight: bolder;
+}
+#ad #ad-left {
+  background-image: url(../img/books-with-amazon-smile_331427528_21-9_1280.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+#ad #ad-left p:nth-child(1) {
+  font-size: 25px;
+  font-weight: bolder;
+  color: white;
+  margin-bottom: 45px;
+}
+#ad #ad-left p:nth-child(2) {
+  font-size: 17px;
+  margin: 20px 0;
+  line-height: 30px;
+}
+#ad #ad-left button {
+  width: 170px;
+  height: 50px;
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
 }
 
-#footer {
+footer {
   width: 100%;
-  height: 500px;
-  background-color: lightblue;
+  height: 200px;
+  margin: 0 auto;
+  margin: 0 auto;
+}
+footer #footer-wrap {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+footer #footer-wrap #back-top {
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  background-color: rgb(63, 67, 77);
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer #footer-wrap #back-top:hover {
+  cursor: pointer;
+  background-color: rgb(82, 87, 100);
+}
+footer #footer-wrap #footer-up {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer #footer-wrap #footer-up #footer1 {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(35, 40, 49);
+  margin: 0 auto;
+}
+footer #footer-wrap #footer-up #footer1 #footer1-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin-top: 50px;
+}
+footer #footer-wrap #footer-up #footer1 #footer1-wrap ul {
+  margin: 0 20px;
+}
+footer #footer-wrap #footer-up #footer1 #footer1-wrap li {
+  margin: 10px 20px;
+  font-size: 16px;
+  color: white;
+}
+footer #footer-wrap #footer-up #footer1 #footer1-wrap li img {
+  width: 150px;
+  height: 100px;
+  margin-left: -10px;
+}
+footer #footer-wrap #footer-up #footer1 #footer1-wrap li:nth-child(1) {
+  font-size: 18px;
+  font-weight: bolder;
+}
+footer #footer-wrap #footer-up #footer1 #footer1-wrap li:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+footer #footer-wrap #footer-up #footer1 #footer1-wrap li:nth-child(1):hover {
+  cursor: none;
+  text-decoration: none;
+}
+footer #footer-wrap #footer2 {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(35, 40, 49);
+  border-top: 1px solid rgba(211, 211, 211, 0.562);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer #footer-wrap #footer2 div {
+  width: 150px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 10px;
+}
+footer #footer-wrap #footer2 div select {
+  width: 135px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(185, 184, 184, 0);
+  text-align: center;
+}
+footer #footer-wrap #footer2 div select option {
+  width: 135px;
+  height: 20px;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 12px;
+  color: black;
+}
+footer #footer-wrap #footer2 div select option img {
+  width: auto;
+}
+footer #footer-wrap #footer2 div #amazon-logo {
+  width: 100px;
+  height: 30px;
+  padding-top: 5px;
+}
+footer #footer-wrap #footer2 div #korea-logo {
+  width: 20px;
+  height: 10px;
+}
+footer #footer-bottom {
+  width: 100%;
+  height: 110px;
+  background-color: rgb(21, 24, 31);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 11px;
+  padding-top: 20px;
 }
