@@ -281,7 +281,7 @@ li {
 #review {
   width: 100%;
   height: 400px;
-  background-color: rgba(255, 255, 255, 0.801);
+  background-color: rgba(226, 226, 226, 0.801);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -326,14 +326,12 @@ li {
 
 #more {
   width: 100%;
-  height: 1100px;
-  background-color: rgb(219, 219, 219);
+  height: 1200px;
   padding: 50px 0;
 }
 #more #more1 {
   width: 85%;
-  height: 450px;
-  background-color: white;
+  height: 600px;
   margin: 0 auto;
 }
 #more #more1 #more-top {
@@ -345,39 +343,120 @@ li {
   font-size: 25px;
   font-weight: bolder;
 }
-#more #more1 #more-top P:nth-child(2) i {
-  font-size: 25px;
-  margin: 0 20px;
-}
-#more #more1 #more-bottom {
-  width: 90%;
-  height: 400px;
-  margin: 0 auto;
-  overflow-x: scroll;
-  position: relative;
-}
-#more #more1 #more-bottom #more-bottom-wrap {
-  width: 200%;
-  height: 380px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  position: absolute;
-}
-#more #more1 #more-bottom #more-bottom-wrap .note {
-  width: 180px;
-  height: 350px;
-  background-color: gold;
-  text-align: center;
-}
-#more #more1 #more-bottom #more-bottom-wrap .note h4 {
+#more #more1 #more-top P:nth-child(2) {
   font-size: 13px;
   font-weight: bolder;
+  color: gray;
+}
+#more #more1 #more-top P:nth-child(3) i {
+  font-size: 25px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+#more #more1 #more-bottom {
+  width: 91%;
+  height: 530px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#more #more1 #more-bottom #more-bottom-wrap {
+  width: 3000px;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+#more #more1 #more-bottom #more-bottom-wrap .note {
+  width: 210px;
+  height: 450px;
+  text-align: center;
+  margin: 0 15px;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+#more #more1 #more-bottom #more-bottom-wrap .note .note-img img {
+  width: 150px;
+  height: 200px;
+  margin-top: 30px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+#more #more1 #more-bottom #more-bottom-wrap .note .note-info h4 {
+  font-size: 14px;
+  font-weight: bolder;
   margin: 10px 0;
+  word-wrap: break-word;
+}
+#more #more1 #more-bottom #more-bottom-wrap .note .note-info h6 {
+  font-size: 11px;
+  font-weight: bolder;
+  margin: 10px 0;
+  color: gray;
+}
+#more #more1 #more-bottom #more-bottom-wrap .note .note-info #price::before {
+  content: "Price";
+  padding: 2px 10px;
+  background-color: rgb(22, 143, 224);
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 10px;
+  margin-right: 20px;
+  text-decoration: none !important;
+  display: inline-block;
+}
+#more #more1 #more-bottom #more-bottom-wrap .note .note-info #sale::before {
+  content: "Sale";
+  padding: 2px 10px;
+  background-color: rgb(31, 48, 85);
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+#more #more1 #more-bottom #more-bottom-wrap .note .note-info #price {
+  font-size: 12px;
+  font-weight: bolder;
+  margin-top: 20px;
+  text-decoration: line-through;
+}
+#more #more1 #more-bottom #more-bottom-wrap .note .note-info #sale {
+  font-size: 12px;
+  font-weight: bolder;
+  margin-top: 10px;
+}
+#more #more1 #more-bottom #more-bottom-wrap .note .note-bt {
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#more #more1 #more-bottom #more-bottom-wrap .note .note-bt button {
+  width: 110px;
+  height: 30px;
+  background-color: rgb(255, 183, 0);
+  color: black;
+  font-size: 11px;
+  border: 1px solid transparent;
+  font-weight: bolder;
+  cursor: pointer;
+}
+#more #more1 #more-bottom #more-bottom-wrap .note .note-bt button:hover {
+  background-color: rgb(219, 157, 0);
+}
+#more #more1 #more-bottom #more-bottom-wrap .note .note-bt i {
+  font-size: 20px;
+  cursor: pointer;
+  color: gray;
+  margin-bottom: 1px;
+}
+#more #more1 #more-bottom #more-bottom-wrap .note .note-bt i:hover {
+  color: #091648;
 }
 #more #more2 {
   width: 85%;
-  height: 450px;
+  height: 700px;
   background-color: white;
   margin: 0 auto;
 }
@@ -393,18 +472,61 @@ li {
 #more #more2 #more2-top P:nth-child(2) i {
   font-size: 25px;
   margin: 0 20px;
+  color: white;
 }
 #more #more2 #more2-bottom {
   width: 100%;
-  height: 400px;
+  height: 500px;
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 #more #more2 #more2-bottom .box {
-  width: 150px;
-  height: 350px;
-  background-color: tomato;
+  width: 500px;
+  height: 240px;
+  background-color: rgb(240, 240, 240);
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+#more #more2 #more2-bottom .box .box-img {
+  margin: 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+}
+#more #more2 #more2-bottom .box .box-info {
+  cursor: pointer;
+}
+#more #more2 #more2-bottom .box .box-info img {
+  width: 140px;
+  height: 46px;
+  transform: translateY(100px);
+  transition: all 1s;
+}
+#more #more2 #more2-bottom .box .box-info h4 {
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+#more #more2 #more2-bottom .box .box-info h6 {
+  font-size: 13px;
+  color: rgb(77, 77, 77);
+}
+#more #more2 #more2-bottom .box .box-info h5 {
+  width: 310px;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-top: 10px;
+  color: rgb(73, 73, 73);
+  font-size: 11px;
+}
+
+.box:hover .box-info > img {
+  transform: translateY(10px) !important;
 }
 
 #ad {
