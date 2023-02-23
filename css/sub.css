@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -271,11 +272,226 @@ li {
   height: 700px;
   background-color: lightblue;
 }
+#content #content-wrap {
+  width: 90%;
+  height: 700px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+#content #content-wrap #content-img {
+  width: 39%;
+  height: 700px;
+  margin: 0 10px;
+}
+#content #content-wrap #content-img #imgbox {
+  width: 90%;
+  height: 470px;
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#content #content-wrap #content-img #imgbox img {
+  margin-top: 30px;
+}
+#content #content-wrap #content-img #imglist {
+  width: 90%;
+  height: 187px;
+  margin: 0 auto;
+  overflow-x: scroll;
+}
+#content #content-wrap #content-img #imglist ul {
+  width: 140%;
+  height: 170px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#content #content-wrap #content-img #imglist ul li img {
+  width: 90px;
+  height: 120px;
+}
+#content #content-wrap #content-infor {
+  width: 39%;
+  height: 600px;
+  background-color: gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#content #content-wrap #content-infor #element {
+  width: 90%;
+  height: 120px;
+  background-color: rgb(165, 148, 54);
+  margin-top: 10px;
+}
+#content #content-wrap #content-infor #title {
+  width: 90%;
+  height: 120px;
+  background-color: rgb(230, 211, 105);
+  margin-top: 10px;
+}
+#content #content-wrap #content-infor #author {
+  width: 90%;
+  height: 120px;
+  background-color: rgb(71, 64, 19);
+  margin-top: 10px;
+}
+#content #content-wrap #content-infor #option {
+  width: 90%;
+  height: 120px;
+  background-color: rgb(131, 116, 29);
+  margin-top: 10px;
+}
 
 #infor {
   width: 100%;
-  height: 900px;
-  background-color: lightcoral;
+  height: 1900px;
+  margin: 0 auto;
+}
+#infor #infor-top {
+  width: 80%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 2px solid rgb(190, 190, 190);
+  margin: 0 auto;
+}
+#infor #infor-top p {
+  width: 150px;
+  height: 100%;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  cursor: pointer;
+  font-weight: bolder;
+}
+#infor #infor-top p:hover {
+  color: black;
+}
+#infor #infor-top .p-active {
+  color: black;
+  border-bottom: 9px solid rgb(255, 153, 0);
+}
+
+#infor-box {
+  width: 100%;
+  height: 800px;
+  margin-top: 20px;
+}
+#infor-box #infor1 {
+  width: 80%;
+  height: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#infor-box #infor1 #infor-left {
+  width: 75%;
+  height: 1588px;
+  border-right: 2px solid lightgray;
+  margin-top: 10px;
+}
+#infor-box #infor1 #infor-left h1 {
+  font-size: 25px;
+}
+#infor-box #infor1 #infor-left p {
+  width: 70%;
+  line-height: 35px;
+  margin: 30px 50px;
+}
+#infor-box #infor1 #infor-right {
+  width: 20%;
+  height: 700px;
+  text-align: center;
+}
+#infor-box #infor1 #infor-right p {
+  font-size: 20px;
+  margin: 20px 0;
+  font-weight: bolder;
+}
+#infor-box #infor1 #infor-right div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#infor-box #infor1 #infor-right div .tag {
+  margin: 5px 0;
+  width: 150px;
+  height: 30px;
+  background-color: #46609b;
+  color: white;
+  border: 1px solid transparent;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bolder;
+  line-height: 30px;
+  cursor: pointer;
+}
+#infor-box #infor1 #infor-right div .tag:hover {
+  background-color: #082466;
+}
+#infor-box #infor2 {
+  width: 80%;
+  height: 1600px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  position: absolute;
+  top: 212px;
+  left: -558px;
+  transform: translate(50%, 50%);
+  display: none;
+}
+#infor-box #infor2 h4 {
+  font-size: 20px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+#infor-box #infor2 p {
+  width: 90%;
+  line-height: 30px;
+  margin: 0 50px 30px 50px;
+}
+#infor-box #infor3 {
+  width: 80%;
+  height: 700px;
+  margin: 0 auto;
+  position: absolute;
+  top: 368px;
+  left: -558px;
+  transform: translate(50%, 92%);
+  display: none;
+}
+#infor-box #infor3 ul:nth-child(1) {
+  margin: 0 100px;
+  font-weight: bolder;
+  color: rgb(99, 98, 98);
+  float: left;
+  margin-left: 600px;
+}
+#infor-box #infor3 ul:nth-child(1) li {
+  margin: 20px 0;
+  font-size: 20px;
+}
+#infor-box #infor3 ul:nth-child(2) {
+  margin: 0 50px;
+  font-weight: bolder;
+}
+#infor-box #infor3 ul:nth-child(2) li {
+  margin: 20px 0;
+  font-size: 20px;
 }
 
 #review {
@@ -391,8 +607,20 @@ li {
   margin: 10px 0;
   color: gray;
 }
+#more #more1 #more-bottom #more-bottom-wrap .note .note-info h6::after {
+  content: "택배사의 배송지연 문제로 인해 주문일 부터 3일 이상 소요";
+  width: 150px;
+  height: 30px;
+  padding: 2px 10px;
+  color: rgb(245, 117, 78);
+  font-weight: bold;
+  font-size: 9px;
+  margin: 10px 0 0 0;
+  display: inline-block;
+  margin: 0 auto;
+}
 #more #more1 #more-bottom #more-bottom-wrap .note .note-info #price::before {
-  content: "Price";
+  content: "판매가격";
   padding: 2px 10px;
   background-color: rgb(22, 143, 224);
   color: white;
@@ -404,7 +632,7 @@ li {
   display: inline-block;
 }
 #more #more1 #more-bottom #more-bottom-wrap .note .note-info #sale::before {
-  content: "Sale";
+  content: "특가세일";
   padding: 2px 10px;
   background-color: rgb(31, 48, 85);
   color: white;
@@ -416,13 +644,14 @@ li {
 #more #more1 #more-bottom #more-bottom-wrap .note .note-info #price {
   font-size: 12px;
   font-weight: bolder;
-  margin-top: 20px;
+  margin-top: 10px;
   text-decoration: line-through;
 }
 #more #more1 #more-bottom #more-bottom-wrap .note .note-info #sale {
   font-size: 12px;
   font-weight: bolder;
-  margin-top: 10px;
+  margin: 5px 0 0 0;
+  line-height: 20px;
 }
 #more #more1 #more-bottom #more-bottom-wrap .note .note-bt {
   width: 100%;

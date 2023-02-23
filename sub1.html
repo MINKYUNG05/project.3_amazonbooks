@@ -118,9 +118,25 @@
 
     <div id="content">
         <div id="content-wrap">
-            <div id="content-img"></div>
+            <div id="content-img">
+                <div id="imgbox">
+                    <img src="img/cover1.PNG" alt="book">
+                </div>
+                <div id="imglist">
+                    <ul>
+                        <li><img src="img/cover1.PNG" alt="book"></li>
+                        <li><img src="img/cover1.PNG" alt="book"></li>
+                        <li><img src="img/cover1.PNG" alt="book"></li>
+                        <li><img src="img/cover1.PNG" alt="book"></li>
+                        <li><img src="img/cover1.PNG" alt="book"></li>
+                        <li><img src="img/cover1.PNG" alt="book"></li>
+                    </ul>
+                </div>
+            </div>
             <div id="content-infor">
-                <div id="element"></div>
+                <div id="element">
+                    <button></button>
+                </div>
                 <div id="title"></div>
                 <div id="author"></div>
                 <div id="option"></div>
@@ -130,9 +146,138 @@
 
 
     <div id="infor">
-        <div id="infor-top"></div>
-        <div id="infor-box"></div>
+        <div id="infor-top">
+            <p id="about-book">책에 대해서</p>
+            <p id="about-author">저자</p>
+            <p id="atc">디테일</p>
+        </div>
+
+        <div id="infor-box">
+            <div id="infor1">
+                <div id="infor-left"></div>
+                <div id="infor-right">
+                    <p>주요 토픽</p>
+                    <div>
+                        <p class="tag">문학</p>
+                        <p class="tag">산문</p>
+                        <p class="tag">러시아문학</p>
+                        <p class="tag">작가</p>
+                        <p class="tag">문화</p>
+                    </div>
+                </div>
+            </div>
+            <div id="infor2"></div>
+            <div id="infor3">
+                <ul>
+                    <li>출판 유형</li>
+                    <li>연령 제한</li>
+                    <li>출판사</li>
+                    <li>ISBN</li>
+                    <li>페이지 수</li>
+                    <li>발행 연도</li>
+                    <li>체재</li>
+                    <li>크기</li>
+                    <li>무게</li>
+                </ul>
+
+                <ul>
+                    <li>하드 커버</li>
+                    <li>16세 이상</li>
+                    <li>Non-Fiction</li>
+                    <li>978-5-00139-076-3</li>
+                    <li>1,504 페이지</li>
+                    <li>2022 년</li>
+                    <li>70 x 90 / 16</li>
+                    <li>168 x 221 x 73</li>
+                    <li>5.823kg</li>
+
+                </ul>
+            </div>
+        </div>
     </div>
+
+    <script>
+
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: "미움받을", size: 50 },
+            headers: { Authorization: "KakaoAK 4b0905b291a261ae8f16e3c80a8272e2" }
+        })
+            .done(function (msg) {
+
+
+                // for문 (8개)
+                var boxs = document.getElementsByClassName('bookimg');
+
+
+                for (var i = 0; i < boxs.length; i++) {
+
+                    $(".bookimg").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
+                    $(".title").eq(i).append("<p>" + msg.documents[i].title + "</p>");
+
+
+                    $(".infor").eq(i).append("<p>" + msg.documents[i].authors + "</p>");
+
+                }
+
+            });
+
+        $(function () {
+            $.get("./txt/about book.txt", function (data) {
+                $("#infor-left").html(data);
+            })
+
+        });
+
+        $(function () {
+            $.get("./txt/about author.txt", function (data) {
+                $("#infor2").html(data);
+            })
+
+        });
+
+        $(document).ready(function () {
+                $("#infor3").hide();
+            });
+
+
+        // movement elements
+$(function () {
+    $('#about-author').click(function () {
+        $('#about-book, #atc').removeClass("p-active");
+        $(this).addClass("p-active");
+
+        $("#infor2").fadeIn("slow");
+        $("#infor1").hide();
+        $("#infor3").hide();
+     
+    });
+
+
+    $('#about-book').click(function () {
+        $('#about-author, #atc').removeClass("p-active");
+        $(this).addClass("p-active");
+
+        $("#infor1").fadeIn("slow");
+        $("#infor2").hide();
+        $("#infor3").hide();
+      
+
+    });
+
+    $('#atc').click(function () {
+        $('#about-book, #about-author').removeClass("p-active");
+        $(this).addClass("p-active");
+
+        $("#infor3").fadeIn("slow");
+        $("#infor2").hide();
+        $("#infor1").hide();
+      
+
+    });
+});
+    </script>
 
 
     <div id="review">
@@ -330,7 +475,7 @@
                     $(".note-img").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
                     $(".note-info").eq(i).append("<h4>" + msg.documents[i].title + "</h4>");
                     $(".note-info").eq(i).append("<h6>" + msg.documents[i].authors + "</h6>");
-                    $(".note-info").eq(i).append("<p id=price>" + msg.documents[i].price + "원</p>");
+                    $(".note-info").eq(i).append("<p id=price>" + msg.documents[i].price + "원 </p>");
                     $(".note-info").eq(i).append("<p id=sale>" + msg.documents[i].sale_price + "원</p>");
                 }
             });
@@ -347,7 +492,7 @@
                 var boxs = document.getElementsByClassName('box');
                 for (var i = 0; i < boxs.length; i++) {
                     $(".box-img").eq(i).append('<a href="#">' + "<img src='" + msg.documents[i].thumbnail + "'/>" + "</a>");
-                    
+
                     $(".box-info").eq(i).prepend("<h6>" + msg.documents[i].authors + "</h6>");
                     $(".box-info").eq(i).prepend("<h4>" + msg.documents[i].title + "</h4>");
 
@@ -355,7 +500,7 @@
                     var str2 = str.substring(0, 200);
 
                     $(".box-info").eq(i).append("<h5>" + str2 + "</h5>");
-                    $(".box-info").eq(i).append('<img src= img/vippng.com-movie-slate-png-261863.png  alt="" id=buy-img>' );
+                    $(".box-info").eq(i).append('<img src= img/vippng.com-movie-slate-png-261863.png  alt="" id=buy-img>');
 
                 }
 
