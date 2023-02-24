@@ -117,29 +117,94 @@
     </div>
 
     <div id="content">
+
         <div id="content-wrap">
             <div id="content-img">
                 <div id="imgbox">
-                    <img src="img/cover1.PNG" alt="book">
+                    <!-- <div id="index">
+                        <p>
+                            <a href="#">메인</a> | 
+                            <a href="#">공통</a> | 
+                            <a href="#">예술</a> | 
+                            <a href="#">소설</a> | 
+                            <a href="#">죄와벌: 러시아 문학의 주요 책(1, 2권)</a></p>
+                    </div> -->
+                    <img src="img/b1.PNG" alt="book">
                 </div>
-                <div id="imglist">
-                    <ul>
-                        <li><img src="img/cover1.PNG" alt="book"></li>
-                        <li><img src="img/cover1.PNG" alt="book"></li>
-                        <li><img src="img/cover1.PNG" alt="book"></li>
-                        <li><img src="img/cover1.PNG" alt="book"></li>
-                        <li><img src="img/cover1.PNG" alt="book"></li>
-                        <li><img src="img/cover1.PNG" alt="book"></li>
-                    </ul>
-                </div>
+
+            </div>
+
+            <div id="imglist">
+                <ul>
+
+                    <li><img src="img/b2.PNG" alt="book"></li>
+                    <li><img src="img/b3.PNG" alt="book"></li>
+                    <li><img src="img/b4.PNG" alt="book"></li>
+                    <li><img src="img/b5.PNG" alt="book"></li>
+                    <li><img src="img/b6.PNG" alt="book"></li>
+                    <li><img src="img/b7.PNG" alt="book"></li>
+                    <li><img src="img/b8.PNG" alt="book"></li>
+                    <li><img src="img/b9.PNG" alt="book"></li>
+
+                </ul>
             </div>
             <div id="content-infor">
                 <div id="element">
-                    <button></button>
+                    <div id="index">
+                        <p>
+                            <a href="#">메인</a> |
+                            <a href="#">공통</a> |
+                            <a href="#">예술</a> |
+                            <a href="#">소설</a> |
+                            <a href="#">죄와벌: 러시아 문학의 주요 책(1, 2권)</a>
+                        </p>
+                    </div>
+
+                    <div id="ele-bt-wrap">
+                        <div id="ele-bt">
+                            <button>Best-Seller</button>
+                            <button>Review</button>
+                        </div>
+
+                        <p><i class="fa-solid fa-share-from-square"></i> 공유하기</p>
+                    </div>
                 </div>
-                <div id="title"></div>
-                <div id="author"></div>
-                <div id="option"></div>
+
+
+                <div id="title">
+                    <p>죄와벌 : 도스토예프스키의 4대 장편 소설</p>
+                    <p>표도르 도스토예프스키 지음 / 김정은 옮김</p>
+                    <p>출판사 지식을 만드는 지식</p>
+                </div>
+
+
+                <div id="author">
+                    <button>Hard Cover<br><br>
+                        재입고 예정
+
+                    </button>
+                    <button>E-Book<br><br>
+                        13,900원
+                    </button>
+                </div>
+                <div id="option">
+                    <h2> 24,900원</h2>
+                    <p>재입고 예정</p>
+                    <p><button>구입하기</button> <i class="fa-solid fa-heart"></i></p>
+                </div>
+
+                
+                <div id="ship">
+                    <p>도서 포함 15,000원 이상 무료배송 <i class="fa-solid fa-circle-exclamation"></i> </p>
+                    <p>내일(2/25,토) 도착예정 <i class="fa-solid fa-truck-fast"></i></p>
+                </div>
+
+                <div id="memo">
+                    <h3><i class="fa-solid fa-circle-check"></i>러시아 문학 정경에 포함된 러시아 문학의 가장 중요한 작품에 관한 60개의 기사</h3>
+                    <h3><i class="fa-solid fa-circle-check"></i>권위 있는 언어학자, 문학 평론가, 작가, 문화학자, 언어학자 등 저자는 과학적이고 비판적인
+                        문헌에 의존하여 독자가 가질 수 있는 책에 대한 질문에 명확하고 쉽게 대답합니다.</h3>
+                </div>
+
             </div>
         </div>
     </div>
@@ -238,45 +303,48 @@
         });
 
         $(document).ready(function () {
-                $("#infor3").hide();
-            });
+            $("#infor3").hide();
+        });
 
 
         // movement elements
-$(function () {
-    $('#about-author').click(function () {
-        $('#about-book, #atc').removeClass("p-active");
-        $(this).addClass("p-active");
+        $(function () {
+            $('#about-author').click(function () {
+                $('#about-book, #atc').removeClass("p-active");
+                $(this).addClass("p-active");
+                $(this).parents('#infor').addClass("infor2-active");
 
-        $("#infor2").fadeIn("slow");
-        $("#infor1").hide();
-        $("#infor3").hide();
-     
-    });
+                $("#infor2").fadeIn("slow");
+                $("#infor1").hide();
+                $("#infor3").hide();
+
+            });
 
 
-    $('#about-book').click(function () {
-        $('#about-author, #atc').removeClass("p-active");
-        $(this).addClass("p-active");
+            $('#about-book').click(function () {
+                $('#about-author, #atc').removeClass("p-active");
+                $(this).addClass("p-active");
 
-        $("#infor1").fadeIn("slow");
-        $("#infor2").hide();
-        $("#infor3").hide();
-      
 
-    });
+                $("#infor1").fadeIn("slow");
+                $("#infor2").hide();
+                $("#infor3").hide();
 
-    $('#atc').click(function () {
-        $('#about-book, #about-author').removeClass("p-active");
-        $(this).addClass("p-active");
 
-        $("#infor3").fadeIn("slow");
-        $("#infor2").hide();
-        $("#infor1").hide();
-      
+            });
 
-    });
-});
+            $('#atc').click(function () {
+                $('#about-book, #about-author').removeClass("p-active");
+                $(this).addClass("p-active");
+                $(this).parents('#infor').addClass("infor3-active");
+
+                $("#infor3").fadeIn("slow");
+                $("#infor2").hide();
+                $("#infor1").hide();
+
+
+            });
+        });
     </script>
 
 
