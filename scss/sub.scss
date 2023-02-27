@@ -10,6 +10,18 @@ li {
     list-style-type: none;
 }
 
+a:active {
+    color: rgb(255, 153, 0);
+}
+
+a:link {
+    color: rgb(255, 255, 255);
+}
+
+a:visited {
+    color: rgb(255, 255, 255);
+}
+
 #promotion-code {
     width: 100%;
     height: 30px;
@@ -115,6 +127,9 @@ li {
                 margin: 0 10px;
                 font-weight: bolder;
                 color: white;
+                a{
+                    text-decoration: none;
+                }
 
             }
 
@@ -539,17 +554,19 @@ li {
                 button {
                     width: 47%;
                     height: 100px;
-                    background-color: transparent;
-                    border: 3px solid rgb(40, 45, 63);
-                    border-radius: 20px;
+                    // background-color: transparent;
+                    border: 1px solid transparent;
+                    background-image: linear-gradient(to left top, #17233d, #223153, #2d406a, #395082, #46609b);
+                    border-radius: 50px;
                     font-size: 15px;
                     font-weight: bolder;
                     cursor: pointer;
+                    color: white;
                 }
 
                 button:hover {
-                    background-image: linear-gradient(to left top, #17233d, #223153, #2d406a, #395082, #46609b);
-                    border: 1px solid transparent;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+                    // border: 1px solid transparent;
                     color: white;
                 }
             }
@@ -564,40 +581,60 @@ li {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                text-align: center;
+                // text-align: center;
 
                 h2 {
+                    font-size: 23px;
                     width: 30%;
+                    float:left;
+
+                    p {
+                        font-size: 12px;
+                    }
+                }
+
+                h5 {
+                    width: 15%;
+                    text-decoration: line-through;
                 }
 
                 p {
-                    width: 30%;
-                    color:rgb(216, 70, 34);
-                    font-size: 13px; 
-                    font-weight:bolder;
+                    width: 20%;
+                    color: rgb(216, 70, 34);
+                    font-size: 13px;
+                    font-weight: bolder;
                 }
 
                 p {
-                    width: 40%;
+                    width: 35%;
 
                     button {
                         width: 70%;
                         height: 40px;
-                        background-color: rgb(255, 166, 0);
+                        background-color: rgba(255, 190, 69, 0.918);
                         border: 1px solid transparent;
+                        font-weight: bolder;
                         border-radius: 30px;
+                        cursor: pointer;
                     }
 
-                    i{color: black;
-                    margin: 0 10px;
-                    font-size: 20px; 
-                    cursor:pointer;
-                }
+                    button:hover{
+                        background-color: rgb(255, 166, 0);
+                        border: 1px solid transparent;
+                    }
 
-                
-                i:hover{color:rgb(252, 98, 98);
-                    
-                }
+                    i {
+                        color: black;
+                        margin: 0 10px;
+                        font-size: 20px;
+                        cursor: pointer;
+                    }
+
+
+                    i:hover {
+                        color: rgb(252, 98, 98);
+
+                    }
                 }
 
             }
@@ -607,8 +644,10 @@ li {
                 height: 50px;
                 // background-color: rgb(177, 169, 124);
                 margin: 20px 0;
-              
-                p{margin: 10px 0 ;}
+
+                p {
+                    margin: 10px 0;
+                }
 
             }
 
@@ -622,7 +661,9 @@ li {
                     font-size: 16px;
                     margin: 10px 0;
 
-                    i{margin: 5px;}
+                    i {
+                        margin: 5px;
+                    }
                 }
 
             }
@@ -680,13 +721,16 @@ li {
 
 }
 
-// #infor1-active{height: 1400px;}
-#infor2-active {
-    height: 2900px;
+.infor1-active {
+    height: 1400px !important;
 }
 
-#infor3-active {
-    height: 700px;
+.infor2-active {
+    height: 2900px !important;
+}
+
+.infor3-active {
+    height: 700px !important;
 }
 
 #infor-box {
@@ -777,7 +821,7 @@ li {
         // overflow-y: scroll;
         position: absolute;
         top: 170px;
-        left: -458px;
+        left: -558px;
         transform: translate(50%, 50%);
         display: none;
 

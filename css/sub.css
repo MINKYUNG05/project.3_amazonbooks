@@ -11,6 +11,18 @@ li {
   list-style-type: none;
 }
 
+a:active {
+  color: rgb(255, 153, 0);
+}
+
+a:link {
+  color: rgb(255, 255, 255);
+}
+
+a:visited {
+  color: rgb(255, 255, 255);
+}
+
 #promotion-code {
   width: 100%;
   height: 30px;
@@ -101,6 +113,9 @@ li {
   margin: 0 10px;
   font-weight: bolder;
   color: white;
+}
+#header-bottom #header-wrap ul li a {
+  text-decoration: none;
 }
 #header-bottom #header-wrap ul li:hover {
   color: rgb(255, 174, 0);
@@ -414,16 +429,16 @@ li {
 #content #content-wrap #content-infor #author button {
   width: 47%;
   height: 100px;
-  background-color: transparent;
-  border: 3px solid rgb(40, 45, 63);
-  border-radius: 20px;
+  border: 1px solid transparent;
+  background-image: linear-gradient(to left top, #17233d, #223153, #2d406a, #395082, #46609b);
+  border-radius: 50px;
   font-size: 15px;
   font-weight: bolder;
   cursor: pointer;
+  color: white;
 }
 #content #content-wrap #content-infor #author button:hover {
-  background-image: linear-gradient(to left top, #17233d, #223153, #2d406a, #395082, #46609b);
-  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
   color: white;
 }
 #content #content-wrap #content-infor #option {
@@ -433,26 +448,40 @@ li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  text-align: center;
 }
 #content #content-wrap #content-infor #option h2 {
+  font-size: 23px;
   width: 30%;
+  float: left;
+}
+#content #content-wrap #content-infor #option h2 p {
+  font-size: 12px;
+}
+#content #content-wrap #content-infor #option h5 {
+  width: 15%;
+  text-decoration: line-through;
 }
 #content #content-wrap #content-infor #option p {
-  width: 30%;
+  width: 20%;
   color: rgb(216, 70, 34);
   font-size: 13px;
   font-weight: bolder;
 }
 #content #content-wrap #content-infor #option p {
-  width: 40%;
+  width: 35%;
 }
 #content #content-wrap #content-infor #option p button {
   width: 70%;
   height: 40px;
+  background-color: rgba(255, 190, 69, 0.918);
+  border: 1px solid transparent;
+  font-weight: bolder;
+  border-radius: 30px;
+  cursor: pointer;
+}
+#content #content-wrap #content-infor #option p button:hover {
   background-color: rgb(255, 166, 0);
   border: 1px solid transparent;
-  border-radius: 30px;
 }
 #content #content-wrap #content-infor #option p i {
   color: black;
@@ -518,12 +547,16 @@ li {
   border-bottom: 9px solid rgb(255, 153, 0);
 }
 
-#infor2-active {
-  height: 2900px;
+.infor1-active {
+  height: 1400px !important;
 }
 
-#infor3-active {
-  height: 700px;
+.infor2-active {
+  height: 2900px !important;
+}
+
+.infor3-active {
+  height: 700px !important;
 }
 
 #infor-box {
@@ -593,7 +626,7 @@ li {
   margin: 0 auto;
   position: absolute;
   top: 170px;
-  left: -458px;
+  left: -558px;
   transform: translate(50%, 50%);
   display: none;
 }
